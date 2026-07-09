@@ -3,7 +3,7 @@
 // hechos: array de 4 elementos ordenados por `orden`, cada uno
 // { ciudad: { nombre, lat, lon }, anio, actividad }
 
-import { MAX_TURNOS, PUNTOS_POR_TURNO, PENALIZACION_PISTA } from './config.js';
+import { MAX_TURNOS, PUNTOS_POR_TURNO, PENALIZACION_PISTA_AÑO, PENALIZACION_PISTA_ACTIVIDAD  } from './config.js';
 import { isNameMatch } from './matching.js';
 
 export function createGameState(personaje) {
@@ -42,7 +42,7 @@ export function revelarPista(state, indiceCiudad) {
   return {
     ...state,
     pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: nivelActual + 1 },
-    penalizacionPistas: state.penalizacionPistas + PENALIZACION_PISTA,
+    penalizacionPistas: state.penalizacionPistas + (nivelActual === 0 ? PENALIZACION_PISTA_AÑO : PENALIZACION_PISTA_ACTIVIDAD),
   };
 }
 
@@ -85,10 +85,4 @@ export function pasarTurno(state) {
   }
 
   return { ...state, turno: state.turno + 1, respuestas };
-}
-
-// Actividades junto a cada ciudad revelada, para la pantalla final cuando se
-// agotan los turnos sin acertar.
-export function actividadesFinales(state) {
-  return ciudadesReveladas(state);
 }

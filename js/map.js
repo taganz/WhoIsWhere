@@ -50,7 +50,11 @@ function bezierPoints(p0, p1, curvature = 0.2, segments = 40) {
 // devolver el texto a mostrar en el tooltip para ese momento.
 export function addCiudad(hecho, indice, onClickCiudad) {
   const ciudad = hecho.ciudad;
-  const marker = L.marker([ciudad.lat, ciudad.lon]).addTo(map).bindPopup(ciudad.nombre);
+  // autoClose/closeOnClick a false: al terminar la partida se abren los
+  // popups de las 4 ciudades a la vez y deben permanecer todos visibles.
+  const marker = L.marker([ciudad.lat, ciudad.lon])
+    .addTo(map)
+    .bindPopup(ciudad.nombre, { autoClose: false, closeOnClick: false });
 
   // Leaflet, por defecto, alterna abrir/cerrar el popup en cada clic sobre el
   // marcador. Sustituimos ese comportamiento para que cada clic actualice el
@@ -81,4 +85,13 @@ export function addCiudad(hecho, indice, onClickCiudad) {
     const group = L.featureGroup(markers);
     map.fitBounds(group.getBounds(), { padding: [40, 40], animate: false });
   }
+}
+
+// Al terminar la partida: abre a la vez el tooltip de todas las ciudades
+// reveladas. formatear(indice) debe devolver el texto final para cada una.
+export function mostrarTodasLasPistas(formatear) {
+  markers.forEach((marker, indice) => {
+    marker.setPopupContent(formatear(indice));
+    marker.openPopup();
+  });
 }

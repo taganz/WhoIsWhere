@@ -5,11 +5,10 @@ import {
   puntosEnJuego,
   submitGuess,
   pasarTurno,
-  actividadesFinales,
   revelarPista,
   nivelPista,
 } from './game.js';
-import { initMap, resetMap, addCiudad, invalidateSize } from './map.js';
+import { initMap, resetMap, addCiudad, invalidateSize, mostrarTodasLasPistas } from './map.js';
 import { fetchRandomPersonaje } from './data.js';
 import { saveGame, getUltimoPersonajeId, setUltimoPersonajeId } from './persistence.js';
 import { fetchHistorial } from './history.js';
@@ -35,10 +34,11 @@ const el = {
   formRespuesta: document.getElementById('form-respuesta'),
   inputNombre: document.getElementById('input-nombre'),
   btnPaso: document.getElementById('btn-paso'),
+  mapSlotGame: document.getElementById('map-slot-game'),
 
   endResultado: document.getElementById('end-resultado'),
   endPersonajeNombre: document.getElementById('end-personaje-nombre'),
-  endDetalle: document.getElementById('end-detalle'),
+  mapSlotEnd: document.getElementById('map-slot-end'),
   endPuntos: document.getElementById('end-puntos'),
   formAlias: document.getElementById('form-alias'),
   inputAlias: document.getElementById('input-alias'),
@@ -103,25 +103,32 @@ function renderFinDePartida() {
   el.endPersonajeNombre.textContent = gameState.personaje.nombre;
   el.endPuntos.textContent = gameState.puntos;
 
-  el.endDetalle.innerHTML = '';
-  if (!gano) {
-    actividadesFinales(gameState).forEach((h) => {
-      const li = document.createElement('li');
-      li.textContent = `${h.ciudad.nombre} (${h.anio}): ${h.actividad}`;
-      el.endDetalle.appendChild(li);
-    });
-  }
-
   el.inputAlias.value = '';
   el.inputWebsite.value = '';
   el.guardarEstado.textContent = '';
   el.btnGuardar.disabled = false;
 
+  el.mapSlotEnd.appendChild(document.getElementById('map'));
   showScreen('end');
+  invalidateSize();
+
+  // Si se ha acertado antes del último turno, aún faltan ciudades por pintar
+  // en el mapa: al terminar la partida se muestran las 4 siempre.
+  const hechos = gameState.personaje.hechos;
+  while (mapPintadoHasta < hechos.length) {
+    addCiudad(hechos[mapPintadoHasta], mapPintadoHasta, onClickCiudad);
+    mapPintadoHasta += 1;
+  }
+  // Solo año por defecto; el hecho se revela al hacer clic en la ciudad (ver onClickCiudad).
+  mostrarTodasLasPistas((indice) => formatearTooltipCiudad(hechos[indice], 1));
 }
 
 async function iniciarPartida() {
   showScreen('game');
+
+  // El div del mapa se mueve a la pantalla final al terminar la partida
+  // (para mostrar las 4 ciudades allí); lo devolvemos a la de juego.
+  el.mapSlotGame.appendChild(document.getElementById('map'));
 
   // Inicializar Leaflet solo cuando el contenedor ya es visible: si se crea
   // el mapa dentro de un contenedor con display:none, Leaflet calcula mal
