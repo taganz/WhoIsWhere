@@ -3,7 +3,7 @@
 // hechos: array de 4 elementos ordenados por `orden`, cada uno
 // { ciudad: { nombre, lat, lon }, anio, actividad }
 
-import { MAX_TURNOS, PUNTOS_POR_TURNO } from './config.js';
+import { MAX_TURNOS, PUNTOS_POR_TURNO, PENALIZACION_PISTA } from './config.js';
 import { isNameMatch } from './matching.js';
 
 export function createGameState(personaje) {
@@ -15,21 +15,39 @@ export function createGameState(personaje) {
     terminada: false,
     intentosFallidos: [],
     respuestas: [],
+    pistasUsadas: {},
+    penalizacionPistas: 0,
   };
 }
 
-// Ciudades visibles en el turno actual. A partir del turno 2 se muestra el
-// año de todas las ciudades ya reveladas (incluida la del turno 1).
+// Ciudades (con su hecho completo) visibles en el turno actual. El año y el
+// hecho de cada una solo se revelan al hacer clic en el marcador del mapa.
 export function ciudadesReveladas(state) {
-  const conAnio = state.turno >= 2;
-  return state.personaje.hechos.slice(0, state.turno).map((h) => ({
-    ciudad: h.ciudad,
-    anio: conAnio ? h.anio : null,
-  }));
+  return state.personaje.hechos.slice(0, state.turno);
+}
+
+// Nivel de pista revelado para una ciudad: 0 = solo nombre, 1 = + año, 2 = + hecho.
+export function nivelPista(state, indiceCiudad) {
+  return state.pistasUsadas[indiceCiudad] || 0;
+}
+
+// Cada clic sobre una ciudad sube su nivel de pista un escalón (hasta 2). Las
+// dos primeras veces penaliza los puntos en juego; a partir de la tercera, no.
+export function revelarPista(state, indiceCiudad) {
+  if (state.terminada) return state;
+
+  const nivelActual = nivelPista(state, indiceCiudad);
+  if (nivelActual >= 2) return state;
+
+  return {
+    ...state,
+    pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: nivelActual + 1 },
+    penalizacionPistas: state.penalizacionPistas + PENALIZACION_PISTA,
+  };
 }
 
 export function puntosEnJuego(state) {
-  return PUNTOS_POR_TURNO[state.turno - 1];
+  return Math.max(0, PUNTOS_POR_TURNO[state.turno - 1] - state.penalizacionPistas);
 }
 
 export function submitGuess(state, texto) {
@@ -43,7 +61,7 @@ export function submitGuess(state, texto) {
       ...state,
       acertado: true,
       terminada: true,
-      puntos: PUNTOS_POR_TURNO[state.turno - 1],
+      puntos: puntosEnJuego(state),
       respuestas,
     };
   }
@@ -72,9 +90,5 @@ export function pasarTurno(state) {
 // Actividades junto a cada ciudad revelada, para la pantalla final cuando se
 // agotan los turnos sin acertar.
 export function actividadesFinales(state) {
-  return state.personaje.hechos.slice(0, state.turno).map((h) => ({
-    ciudad: h.ciudad,
-    anio: h.anio,
-    actividad: h.actividad,
-  }));
+  return ciudadesReveladas(state);
 }

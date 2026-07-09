@@ -1,5 +1,14 @@
 import { MAX_TURNOS } from './config.js';
-import { createGameState, ciudadesReveladas, puntosEnJuego, submitGuess, pasarTurno, actividadesFinales } from './game.js';
+import {
+  createGameState,
+  ciudadesReveladas,
+  puntosEnJuego,
+  submitGuess,
+  pasarTurno,
+  actividadesFinales,
+  revelarPista,
+  nivelPista,
+} from './game.js';
 import { initMap, resetMap, addCiudad, invalidateSize } from './map.js';
 import { fetchRandomPersonaje } from './data.js';
 import { saveGame, getUltimoPersonajeId, setUltimoPersonajeId } from './persistence.js';
@@ -48,6 +57,23 @@ function showScreen(name) {
   Object.entries(screens).forEach(([key, node]) => node.classList.toggle('hidden', key !== name));
 }
 
+function formatearTooltipCiudad(hecho, nivel) {
+  if (nivel <= 0) return hecho.ciudad.nombre;
+  if (nivel === 1) return `${hecho.ciudad.nombre} — ${hecho.anio}`;
+  return `${hecho.ciudad.nombre} — ${hecho.anio}: ${hecho.actividad}`;
+}
+
+// Se invoca en cada clic sobre un marcador del mapa: sube el nivel de pista
+// de esa ciudad (con penalización de puntos las 2 primeras veces) y devuelve
+// el texto que debe mostrar el tooltip.
+function onClickCiudad(indice) {
+  const hecho = gameState.personaje.hechos[indice];
+  gameState = revelarPista(gameState, indice);
+  el.puntosEnJuego.textContent = puntosEnJuego(gameState);
+  const nivel = gameState.terminada ? 2 : nivelPista(gameState, indice);
+  return formatearTooltipCiudad(hecho, nivel);
+}
+
 function renderTurno() {
   el.turnoActual.textContent = gameState.turno;
   el.turnoMax.textContent = MAX_TURNOS;
@@ -63,7 +89,7 @@ function renderTurno() {
 
   const reveladas = ciudadesReveladas(gameState);
   while (mapPintadoHasta < reveladas.length) {
-    addCiudad(reveladas[mapPintadoHasta].ciudad);
+    addCiudad(reveladas[mapPintadoHasta], mapPintadoHasta, onClickCiudad);
     mapPintadoHasta += 1;
   }
 

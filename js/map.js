@@ -45,8 +45,22 @@ function bezierPoints(p0, p1, curvature = 0.2, segments = 40) {
   return points;
 }
 
-export function addCiudad(ciudad) {
+// hecho: { ciudad: { nombre, lat, lon }, anio, actividad }
+// onClickCiudad(indice) se llama en cada clic sobre el marcador y debe
+// devolver el texto a mostrar en el tooltip para ese momento.
+export function addCiudad(hecho, indice, onClickCiudad) {
+  const ciudad = hecho.ciudad;
   const marker = L.marker([ciudad.lat, ciudad.lon]).addTo(map).bindPopup(ciudad.nombre);
+
+  // Leaflet, por defecto, alterna abrir/cerrar el popup en cada clic sobre el
+  // marcador. Sustituimos ese comportamiento para que cada clic actualice el
+  // contenido (nombre -> año -> año + hecho) y lo mantenga siempre abierto.
+  marker.off('click');
+  marker.on('click', () => {
+    marker.setPopupContent(onClickCiudad(indice));
+    marker.openPopup();
+  });
+
   markers.push(marker);
 
   if (revealedLatLngs.length > 0) {

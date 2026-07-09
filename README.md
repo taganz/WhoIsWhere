@@ -31,4 +31,4 @@ Luego abrir `http://localhost:5500`.
 
 ## Despliegue
 
-Conectar el repositorio a Netlify o Vercel como sitio estático (sin build command, publicar la raíz del repo). Ver [`netlify.toml`](netlify.toml).
+Conectar el repositorio a Netlify o Vercel como sitio estático (sin build command, publicar la raíz del repo). Ver [`netlify.toml`](netlify.toml) o [`vercel.json`](vercel.json) según la plataforma elegida.
