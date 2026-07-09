@@ -31,7 +31,7 @@ create table partidas (
   alias         text,
   personaje_id  integer not null references personajes(id),
   acertado      boolean not null,
-  puntos        integer not null check (puntos in (0, 25, 55, 85, 100)),
+  puntos        integer not null check (puntos between 0 and 100),
   turnos_usados integer not null check (turnos_usados between 1 and 4),
   fecha         timestamptz not null default now()
 );

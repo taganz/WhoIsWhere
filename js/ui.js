@@ -10,7 +10,7 @@ import {
 } from './game.js';
 import { initMap, resetMap, addCiudad, invalidateSize, mostrarTodasLasPistas } from './map.js';
 import { fetchRandomPersonaje } from './data.js';
-import { saveGame, getUltimoPersonajeId, setUltimoPersonajeId } from './persistence.js';
+import { saveGame, getUltimoPersonajeId, setUltimoPersonajeId, getAlias, setAlias } from './persistence.js';
 import { fetchHistorial } from './history.js';
 
 const screens = {
@@ -30,6 +30,7 @@ const el = {
   turnoMax: document.getElementById('turno-max'),
   puntosActuales: document.getElementById('puntos-actuales'),
   puntosEnJuego: document.getElementById('puntos-en-juego'),
+  inputAliasJugador: document.getElementById('input-alias-jugador'),
   listaFallos: document.getElementById('lista-fallos'),
   formRespuesta: document.getElementById('form-respuesta'),
   inputNombre: document.getElementById('input-nombre'),
@@ -40,11 +41,7 @@ const el = {
   endPersonajeNombre: document.getElementById('end-personaje-nombre'),
   mapSlotEnd: document.getElementById('map-slot-end'),
   endPuntos: document.getElementById('end-puntos'),
-  formAlias: document.getElementById('form-alias'),
-  inputAlias: document.getElementById('input-alias'),
-  inputWebsite: document.getElementById('input-website'),
   guardarEstado: document.getElementById('guardar-estado'),
-  btnGuardar: document.getElementById('btn-guardar'),
 
   historialLista: document.getElementById('historial-lista'),
 };
@@ -97,16 +94,26 @@ function renderTurno() {
   el.inputNombre.focus();
 }
 
+async function guardarPartidaAutomaticamente() {
+  el.guardarEstado.textContent = 'Guardando…';
+  try {
+    const resultado = await saveGame(gameState, el.inputAliasJugador.value.trim() || getAlias());
+    if (resultado.saved) {
+      el.guardarEstado.textContent = 'Partida guardada.';
+    } else if (resultado.reason === 'rate-limit') {
+      el.guardarEstado.textContent = 'Espera unos segundos antes de guardar otra partida.';
+    }
+  } catch (err) {
+    console.error(err);
+    el.guardarEstado.textContent = 'No se ha podido guardar la partida.';
+  }
+}
+
 function renderFinDePartida() {
   const gano = gameState.acertado;
   el.endResultado.textContent = gano ? '¡Has acertado!' : 'Turnos agotados';
   el.endPersonajeNombre.textContent = gameState.personaje.nombre;
   el.endPuntos.textContent = gameState.puntos;
-
-  el.inputAlias.value = '';
-  el.inputWebsite.value = '';
-  el.guardarEstado.textContent = '';
-  el.btnGuardar.disabled = false;
 
   el.mapSlotEnd.appendChild(document.getElementById('map'));
   showScreen('end');
@@ -121,6 +128,8 @@ function renderFinDePartida() {
   }
   // Solo año por defecto; el hecho se revela al hacer clic en la ciudad (ver onClickCiudad).
   mostrarTodasLasPistas((indice) => formatearTooltipCiudad(hechos[indice], 1));
+
+  guardarPartidaAutomaticamente();
 }
 
 async function iniciarPartida() {
@@ -216,29 +225,18 @@ function initListeners() {
     avanzar(pasarTurno(gameState));
   });
 
-  el.formAlias.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    el.btnGuardar.disabled = true;
-    el.guardarEstado.textContent = 'Guardando…';
-    try {
-      const resultado = await saveGame(gameState, el.inputAlias.value, el.inputWebsite.value);
-      if (resultado.saved) {
-        el.guardarEstado.textContent = 'Partida guardada.';
-      } else if (resultado.reason === 'rate-limit') {
-        el.guardarEstado.textContent = 'Espera unos segundos antes de guardar otra partida.';
-        el.btnGuardar.disabled = false;
-      } else {
-        el.guardarEstado.textContent = 'Partida guardada.';
-      }
-    } catch (err) {
-      console.error(err);
-      el.guardarEstado.textContent = 'No se ha podido guardar la partida.';
-      el.btnGuardar.disabled = false;
+  el.inputAliasJugador.addEventListener('change', () => {
+    const alias = el.inputAliasJugador.value.trim();
+    if (alias) {
+      setAlias(alias);
+    } else {
+      el.inputAliasJugador.value = getAlias();
     }
   });
 }
 
 export function initApp() {
+  el.inputAliasJugador.value = getAlias();
   initListeners();
   showScreen('welcome');
 }

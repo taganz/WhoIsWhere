@@ -14,4 +14,5 @@ export const RATE_LIMIT_MS = 10_000;
 export const LOCALSTORAGE_KEYS = {
   ultimoPersonajeId: 'adivina.ultimoPersonajeId',
   ultimoGuardadoTs: 'adivina.ultimoGuardadoTs',
+  alias: 'adivina.alias',
 };

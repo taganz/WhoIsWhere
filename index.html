@@ -28,9 +28,15 @@
     <!-- Pantalla de juego -->
     <section id="screen-game" class="screen hidden">
       <div class="game-status" aria-live="polite">
-        <span>Turno <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
-        <span>Puntos: <strong id="puntos-actuales">0</strong></span>
-        <span>En juego: <strong id="puntos-en-juego">100</strong></span>
+        <div class="game-status-left">
+          <span>Turno <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
+          <span>En juego: <strong id="puntos-en-juego">100</strong></span>
+        </div>
+        <div class="game-status-right">
+          <label for="input-alias-jugador" class="visually-hidden">Tu nombre</label>
+          <input id="input-alias-jugador" type="text" maxlength="40" autocomplete="off" class="alias-input" />
+          <span>Puntos: <strong id="puntos-actuales">0</strong></span>
+        </div>
       </div>
 
       <div id="map-slot-game"><div id="map"></div></div>
@@ -49,18 +55,9 @@
     <section id="screen-end" class="screen hidden">
       <div class="card">
         <h2 id="end-resultado"></h2>
-        <p>El personaje era: <strong id="end-personaje-nombre"></strong></p>
+        <p>El personaje era: <strong id="end-personaje-nombre"></strong> (<strong id="end-puntos"></strong> puntos)</p>
         <div id="map-slot-end"></div>
-        <p>Puntos obtenidos: <strong id="end-puntos"></strong></p>
-
-        <form id="form-alias" class="alias-form">
-          <label for="input-alias">Alias (opcional)</label>
-          <input id="input-alias" type="text" maxlength="40" autocomplete="off" />
-          <!-- honeypot anti-bot: campo oculto que un humano nunca rellena -->
-          <input id="input-website" name="website" type="text" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <button id="btn-guardar" class="primary-button" type="submit">Guardar partida</button>
-          <p id="guardar-estado" class="save-status" aria-live="polite"></p>
-        </form>
+        <p id="guardar-estado" class="save-status" aria-live="polite"></p>
 
         <button id="btn-jugar-de-nuevo" class="secondary-button" type="button">Jugar de nuevo</button>
       </div>

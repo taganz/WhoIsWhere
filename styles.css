@@ -104,10 +104,30 @@ input:focus-visible {
 
 .game-status {
   display: flex;
-  gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
+}
+
+.game-status-left,
+.game-status-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.alias-input {
+  font: inherit;
+  width: 8.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
 #map {
@@ -155,36 +175,6 @@ input:focus-visible {
 
 .reveal-list li {
   margin-bottom: 0.4rem;
-}
-
-.alias-form {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 1rem 0;
-}
-
-.alias-form label {
-  width: 100%;
-  font-size: 0.9rem;
-  color: var(--color-muted);
-}
-
-.alias-form input[type="text"] {
-  flex: 1 1 220px;
-  font: inherit;
-  padding: 0.6rem 0.75rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
-}
-
-.hp-field {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
 }
 
 .save-status {

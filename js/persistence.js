@@ -10,6 +10,26 @@ export function setUltimoPersonajeId(id) {
   localStorage.setItem(LOCALSTORAGE_KEYS.ultimoPersonajeId, String(id));
 }
 
+function generarAliasAleatorio() {
+  const numero = String(Math.floor(Math.random() * 1000)).padStart(3, '0');
+  return `anonimo${numero}`;
+}
+
+// Alias del jugador en este navegador. Si es la primera vez, se genera uno
+// aleatorio ("anonimoNNN") y se guarda en caché para las próximas partidas.
+export function getAlias() {
+  const guardado = localStorage.getItem(LOCALSTORAGE_KEYS.alias);
+  if (guardado) return guardado;
+
+  const alias = generarAliasAleatorio();
+  localStorage.setItem(LOCALSTORAGE_KEYS.alias, alias);
+  return alias;
+}
+
+export function setAlias(alias) {
+  localStorage.setItem(LOCALSTORAGE_KEYS.alias, alias);
+}
+
 // true si ya se puede guardar (han pasado >= RATE_LIMIT_MS desde el último guardado).
 export function puedeGuardar() {
   const ultimo = Number(localStorage.getItem(LOCALSTORAGE_KEYS.ultimoGuardadoTs) || 0);
@@ -21,12 +41,7 @@ function marcarGuardado() {
 }
 
 // state: resultado final de game.js (createGameState procesado).
-// alias: string o vacío. honeypot: valor del campo oculto (debe llegar vacío).
-export async function saveGame(state, alias, honeypot) {
-  if (honeypot) {
-    // Relleno solo por bots: se descarta el guardado silenciosamente.
-    return { saved: false, reason: 'honeypot' };
-  }
+export async function saveGame(state, alias) {
   if (!puedeGuardar()) {
     return { saved: false, reason: 'rate-limit' };
   }
@@ -34,7 +49,7 @@ export async function saveGame(state, alias, honeypot) {
   const { data: partida, error } = await supabase
     .from('partidas')
     .insert({
-      alias: alias && alias.trim() ? alias.trim() : null,
+      alias,
       personaje_id: state.personaje.id,
       acertado: state.acertado,
       puntos: state.puntos,
