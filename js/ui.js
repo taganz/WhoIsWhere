@@ -199,7 +199,7 @@ async function mostrarHistorial() {
       const resultado = p.acertado
         ? `<span class="history-outcome-win">Acertó (${p.puntos} pts)</span>`
         : '<span class="history-outcome-lose">No acertó</span>';
-      li.innerHTML = `<span>${alias} — ${p.personajeNombre}</span><span>${resultado} · ${formatFecha(p.fecha)}</span>`;
+      li.innerHTML = `<span>${alias}</span><span>${resultado} · ${formatFecha(p.fecha)}</span>`;
       el.historialLista.appendChild(li);
     });
   } catch (err) {
