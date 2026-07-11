@@ -11,7 +11,7 @@ Juego de adivinar un personaje histórico/real a partir de pistas (ciudades dond
 - [ ] Mensaje inicial: "Vamos a adivinar personajes"
 - [ ] Mensaje: "Me voy a pensar un personaje"
 - [ ] Mensaje: "Te voy a decir ciudades en las que estuvo y en qué año"
-- [ ] Instrucciones: "Si sabes quién es, escribe el nombre; si no, dale a 'paso'"
+- [ ] Instrucciones: "Si sabes quién es, ; si no, dale a 'paso'"
 - [ ] Mensaje: "Cuanto antes lo adivines, más puntos obtendrás"
 - [ ] Botón "Empezar"
 

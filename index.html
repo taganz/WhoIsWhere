@@ -15,7 +15,7 @@
       <input id="input-alias-jugador" type="text" maxlength="40" autocomplete="off" class="alias-input" />
       <span>Puntos: <strong id="puntos-actuales">0</strong></span>
     </div>
-    <button id="btn-nav-historial" class="link-button" type="button">Historial</button>
+    <button id="btn-nav-historial" class="link-button" type="button">Ayuda</button>
   </header>
 
   <main>
@@ -23,8 +23,7 @@
     <section id="screen-welcome" class="screen">
       <div class="card">
         <p>Voy a pensar en un personaje histórico.</p>
-        <p>Te mostraré ciudades en las que estuvo.</p>
-        <p>Si sabes quién es, escribe el nombre; si no, dale a &ldquo;Paso&rdquo;.</p>
+        <p>Te daré pistas de lugares, fechas y actividades.</p>
         <p><strong>Cuanto antes lo adivines, más puntos obtendrás.</strong></p>
         <button id="btn-empezar" class="primary-button" type="button">Empezar</button>
       </div>
@@ -43,7 +42,7 @@
 
       <form id="form-respuesta" class="answer-form">
         <label for="input-nombre" class="visually-hidden">Nombre del personaje</label>
-        <input id="input-nombre" type="text" placeholder="Escribe el nombre del personaje" autocomplete="off" />
+        <input id="input-nombre" type="text" placeholder="¿Quién es?" autocomplete="off" />
         <button id="btn-adivinar" class="primary-button" type="submit">Adivinar</button>
         <button id="btn-paso" class="secondary-button" type="button">Paso</button>
       </form>
@@ -65,9 +64,9 @@
     <section id="screen-history" class="screen hidden">
       <div class="card">
         <h3>Ayuda</h3>
-        <p class="muted">Cada intento resta 10 puntos.</p>
-        <p class="muted">El primer clic en una ciudad, en toda la partida, muestra su año. Resta 10 puntos.</p>
-        <p class="muted">A partir de ahí, cada clic en una ciudad muestra directamente año y actividad. Resta 10 puntos.</p>
+        <p class="muted">Cada ciudad mostrada resta 10 puntos.</p>
+        <p class="muted">El primer clic en una ciudad muestra su año y resta 10 puntos.</p>
+        <p class="muted">A partir de ahí, cada clic en una ciudad muestra año y actividad y resta 10 puntos.</p>
         <button id="btn-volver-desde-historial" class="secondary-button" type="button">Volver</button>
         <h3>Historial de partidas</h3>
         <ul id="historial-lista" class="history-list"></ul>
