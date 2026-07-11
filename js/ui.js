@@ -57,6 +57,11 @@ let gameState = null;
 let mapPintadoHasta = 0;
 let mapInicializado = false;
 
+// En móvil, hacer focus() a la fuerza abre el teclado y se come media
+// pantalla (tapando el mapa) justo cuando el jugador solo quiere mirarlo.
+// Solo autoenfocamos en dispositivos con puntero fino (ratón).
+const esDispositivoTactil = window.matchMedia('(pointer: coarse)').matches;
+
 function showScreen(name) {
   Object.entries(screens).forEach(([key, node]) => node.classList.toggle('hidden', key !== name));
 }
@@ -125,7 +130,9 @@ function renderTurno() {
   }
 
   el.inputNombre.value = '';
-  el.inputNombre.focus();
+  if (!esDispositivoTactil) {
+    el.inputNombre.focus();
+  }
 }
 
 async function guardarPartidaAutomaticamente() {
