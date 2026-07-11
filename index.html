@@ -10,6 +10,11 @@
 <body>
   <header class="app-header">
     <h1>Adivina el personaje</h1>
+    <div class="player-status">
+      <label for="input-alias-jugador" class="visually-hidden">Tu nombre</label>
+      <input id="input-alias-jugador" type="text" maxlength="40" autocomplete="off" class="alias-input" />
+      <span>Puntos: <strong id="puntos-actuales">0</strong></span>
+    </div>
     <button id="btn-nav-historial" class="link-button" type="button">Historial</button>
   </header>
 
@@ -27,19 +32,12 @@
 
     <!-- Pantalla de juego -->
     <section id="screen-game" class="screen hidden">
-      <div class="game-status" aria-live="polite">
-        <div class="game-status-left">
-          <span>Turno <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
-          <span>En juego: <strong id="puntos-en-juego">100</strong></span>
-        </div>
-        <div class="game-status-right">
-          <label for="input-alias-jugador" class="visually-hidden">Tu nombre</label>
-          <input id="input-alias-jugador" type="text" maxlength="40" autocomplete="off" class="alias-input" />
-          <span>Puntos: <strong id="puntos-actuales">0</strong></span>
-        </div>
-      </div>
-
       <div id="map-slot-game"><div id="map"></div></div>
+
+      <div class="game-status" aria-live="polite">
+        <span>Turno <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
+        <span>En juego: <strong id="puntos-en-juego">100</strong></span>
+      </div>
 
       <ul id="lista-fallos" class="fail-list" aria-live="polite"></ul>
 
@@ -55,11 +53,11 @@
     <section id="screen-end" class="screen hidden">
       <div class="card">
         <h2 id="end-resultado"></h2>
-        <p>El personaje era: <strong id="end-personaje-nombre"></strong> (<strong id="end-puntos"></strong> puntos)</p>
+        <p>El personaje era: <strong id="end-personaje-nombre"></strong>. Sumas <strong id="end-puntos"></strong> puntos</p>
         <div id="map-slot-end"></div>
         <p id="guardar-estado" class="save-status" aria-live="polite"></p>
 
-        <button id="btn-jugar-de-nuevo" class="secondary-button" type="button">Jugar de nuevo</button>
+        <button id="btn-jugar-de-nuevo" class="primary-button" type="button">Jugar de nuevo</button>
       </div>
     </section>
 
@@ -67,10 +65,10 @@
     <section id="screen-history" class="screen hidden">
       <div class="card">
         <h3>Ayuda</h3>
-        <p class="muted">Primer clic en ciudad muestra año. Resta 10 puntos.</p>
-        <p class="muted">Segundo clic en ciudad muestra actividad. Resta 20 puntos.</p>
+        <p class="muted">Cada intento resta 10 puntos.</p>
+        <p class="muted">El primer clic en una ciudad, en toda la partida, muestra su año. Resta 10 puntos.</p>
+        <p class="muted">A partir de ahí, cada clic en una ciudad muestra directamente año y actividad. Resta 10 puntos.</p>
         <h3>Historial de partidas</h3>
-        <p class="muted">Últimas 20 partidas jugadas por cualquier jugador.</p>
         <ul id="historial-lista" class="history-list"></ul>
         <button id="btn-volver-desde-historial" class="secondary-button" type="button">Volver</button>
       </div>

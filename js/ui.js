@@ -61,14 +61,31 @@ function formatearTooltipCiudad(hecho, nivel) {
 }
 
 // Se invoca en cada clic sobre un marcador del mapa: sube el nivel de pista
-// de esa ciudad (con penalización de puntos las 2 primeras veces) y devuelve
-// el texto que debe mostrar el tooltip.
+// de esa ciudad (con penalización de puntos) y devuelve el texto que debe
+// mostrar el tooltip.
 function onClickCiudad(indice) {
   const hecho = gameState.personaje.hechos[indice];
   gameState = revelarPista(gameState, indice);
   el.puntosEnJuego.textContent = puntosEnJuego(gameState);
+  renderListaFallos();
   const nivel = gameState.terminada ? 2 : nivelPista(gameState, indice);
   return formatearTooltipCiudad(hecho, nivel);
+}
+
+function renderListaFallos() {
+  el.listaFallos.innerHTML = '';
+  gameState.intentosFallidos.forEach((nombre) => {
+    const li = document.createElement('li');
+    li.textContent = nombre;
+    el.listaFallos.appendChild(li);
+  });
+
+  if (gameState.pistaAñoRevelada != null) {
+    const li = document.createElement('li');
+    li.className = 'hint';
+    li.textContent = gameState.pistaAñoRevelada;
+    el.listaFallos.appendChild(li);
+  }
 }
 
 function renderTurno() {
@@ -77,12 +94,7 @@ function renderTurno() {
   el.puntosActuales.textContent = gameState.puntos;
   el.puntosEnJuego.textContent = puntosEnJuego(gameState);
 
-  el.listaFallos.innerHTML = '';
-  gameState.intentosFallidos.forEach((nombre) => {
-    const li = document.createElement('li');
-    li.textContent = nombre;
-    el.listaFallos.appendChild(li);
-  });
+  renderListaFallos();
 
   const reveladas = ciudadesReveladas(gameState);
   while (mapPintadoHasta < reveladas.length) {
@@ -99,7 +111,7 @@ async function guardarPartidaAutomaticamente() {
   try {
     const resultado = await saveGame(gameState, el.inputAliasJugador.value.trim() || getAlias());
     if (resultado.saved) {
-      el.guardarEstado.textContent = 'Partida guardada.';
+      el.guardarEstado.textContent = '';
     } else if (resultado.reason === 'rate-limit') {
       el.guardarEstado.textContent = 'Espera unos segundos antes de guardar otra partida.';
     }

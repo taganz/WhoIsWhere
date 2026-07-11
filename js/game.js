@@ -17,6 +17,8 @@ export function createGameState(personaje) {
     respuestas: [],
     pistasUsadas: {},
     penalizacionPistas: 0,
+    pistaAñoUsada: false,
+    pistaAñoRevelada: null,
   };
 }
 
@@ -31,18 +33,30 @@ export function nivelPista(state, indiceCiudad) {
   return state.pistasUsadas[indiceCiudad] || 0;
 }
 
-// Cada clic sobre una ciudad sube su nivel de pista un escalón (hasta 2). Las
-// dos primeras veces penaliza los puntos en juego; a partir de la tercera, no.
+// El primer clic en una ciudad, en toda la partida, revela solo el año de esa
+// ciudad. A partir de ese momento, cualquier clic en una ciudad no revelada
+// del todo (la misma u otra) muestra directamente año + hecho. Un segundo
+// clic sobre una ciudad ya revelada del todo no hace nada.
 export function revelarPista(state, indiceCiudad) {
   if (state.terminada) return state;
 
   const nivelActual = nivelPista(state, indiceCiudad);
   if (nivelActual >= 2) return state;
 
+  if (!state.pistaAñoUsada) {
+    return {
+      ...state,
+      pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: 1 },
+      pistaAñoUsada: true,
+      pistaAñoRevelada: state.personaje.hechos[indiceCiudad].anio,
+      penalizacionPistas: state.penalizacionPistas + PENALIZACION_PISTA_AÑO,
+    };
+  }
+
   return {
     ...state,
-    pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: nivelActual + 1 },
-    penalizacionPistas: state.penalizacionPistas + (nivelActual === 0 ? PENALIZACION_PISTA_AÑO : PENALIZACION_PISTA_ACTIVIDAD),
+    pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: 2 },
+    penalizacionPistas: state.penalizacionPistas + PENALIZACION_PISTA_ACTIVIDAD,
   };
 }
 
