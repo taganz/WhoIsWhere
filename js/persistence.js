@@ -73,3 +73,10 @@ export async function saveGame(state, alias) {
   marcarGuardado();
   return { saved: true, partidaId: partida.id };
 }
+
+// Suma de puntos de todas las partidas guardadas de este alias.
+export async function fetchPuntosTotales(alias) {
+  const { data, error } = await supabase.from('partidas').select('puntos').eq('alias', alias);
+  if (error) throw error;
+  return (data || []).reduce((total, p) => total + p.puntos, 0);
+}

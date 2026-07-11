@@ -10,7 +10,14 @@ import {
 } from './game.js';
 import { initMap, resetMap, addCiudad, invalidateSize, mostrarTodasLasPistas } from './map.js';
 import { fetchRandomPersonaje } from './data.js';
-import { saveGame, getUltimoPersonajeId, setUltimoPersonajeId, getAlias, setAlias } from './persistence.js';
+import {
+  saveGame,
+  getUltimoPersonajeId,
+  setUltimoPersonajeId,
+  getAlias,
+  setAlias,
+  fetchPuntosTotales,
+} from './persistence.js';
 import { fetchHistorial } from './history.js';
 
 const screens = {
@@ -88,10 +95,18 @@ function renderListaFallos() {
   }
 }
 
+async function actualizarPuntosTotales() {
+  try {
+    const alias = el.inputAliasJugador.value.trim() || getAlias();
+    el.puntosActuales.textContent = await fetchPuntosTotales(alias);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 function renderTurno() {
   el.turnoActual.textContent = gameState.turno;
   el.turnoMax.textContent = MAX_TURNOS;
-  el.puntosActuales.textContent = gameState.puntos;
   el.puntosEnJuego.textContent = puntosEnJuego(gameState);
 
   renderListaFallos();
@@ -112,6 +127,7 @@ async function guardarPartidaAutomaticamente() {
     const resultado = await saveGame(gameState, el.inputAliasJugador.value.trim() || getAlias());
     if (resultado.saved) {
       el.guardarEstado.textContent = '';
+      actualizarPuntosTotales();
     } else if (resultado.reason === 'rate-limit') {
       el.guardarEstado.textContent = 'Espera unos segundos antes de guardar otra partida.';
     }
@@ -244,6 +260,7 @@ function initListeners() {
     } else {
       el.inputAliasJugador.value = getAlias();
     }
+    actualizarPuntosTotales();
   });
 }
 
@@ -251,4 +268,5 @@ export function initApp() {
   el.inputAliasJugador.value = getAlias();
   initListeners();
   showScreen('welcome');
+  actualizarPuntosTotales();
 }
