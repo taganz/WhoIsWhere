@@ -1,5 +1,5 @@
-// Reconocimiento tolerante del nombre del personaje.
-// Formula: distancia de Levenshtein <= max(2, round(0.3 * longitud_texto_normalizado)).
+// Tolerant recognition of the character's name.
+// Formula: Levenshtein distance <= max(2, round(0.3 * normalized_text_length)).
 
 const DIACRITICS_REGEX = new RegExp(String.fromCharCode(0x5b) + String.fromCharCode(0x0300) + '-' + String.fromCharCode(0x036f) + String.fromCharCode(0x5d), 'g');
 

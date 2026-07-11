@@ -1,6 +1,6 @@
-// Lógica pura de turnos: no toca el DOM ni Leaflet.
-// personaje esperado: { id, nombre, nombres_alternativos, hechos }
-// hechos: array de 4 elementos ordenados por `orden`, cada uno
+// Pure turn logic: doesn't touch the DOM or Leaflet.
+// expected personaje: { id, nombre, nombres_alternativos, hechos }
+// hechos: array of 4 elements ordered by `orden`, each one
 // { ciudad: { nombre, lat, lon }, anio, actividad }
 
 import { MAX_TURNOS, PUNTOS_POR_TURNO, PENALIZACION_PISTA_AÑO, PENALIZACION_PISTA_ACTIVIDAD  } from './config.js';
@@ -23,21 +23,21 @@ export function createGameState(personaje) {
   };
 }
 
-// Ciudades (con su hecho completo) visibles en el turno actual. El año y el
-// hecho de cada una solo se revelan al hacer clic en el marcador del mapa.
+// Cities (with their full fact) visible in the current turn. The year and
+// the fact for each are only revealed when clicking the map marker.
 export function ciudadesReveladas(state) {
   return state.personaje.hechos.slice(0, state.turno);
 }
 
-// Nivel de pista revelado para una ciudad: 0 = solo nombre, 1 = + año, 2 = + hecho.
+// Hint level revealed for a city: 0 = name only, 1 = + year, 2 = + fact.
 export function nivelPista(state, indiceCiudad) {
   return state.pistasUsadas[indiceCiudad] || 0;
 }
 
-// El primer clic en una ciudad, en toda la partida, revela solo el año de esa
-// ciudad. A partir de ese momento, cualquier clic en una ciudad no revelada
-// del todo (la misma u otra) muestra directamente año + hecho. Un segundo
-// clic sobre una ciudad ya revelada del todo no hace nada.
+// The first click on a city, in the whole game, reveals only that city's
+// year. From that point on, any click on a not-fully-revealed city (the
+// same one or another) directly shows year + fact. A second click on a
+// city that's already fully revealed does nothing.
 export function revelarPista(state, indiceCiudad) {
   if (state.terminada) return state;
 

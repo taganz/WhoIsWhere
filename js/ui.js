@@ -57,9 +57,9 @@ let gameState = null;
 let mapPintadoHasta = 0;
 let mapInicializado = false;
 
-// En móvil, hacer focus() a la fuerza abre el teclado y se come media
-// pantalla (tapando el mapa) justo cuando el jugador solo quiere mirarlo.
-// Solo autoenfocamos en dispositivos con puntero fino (ratón).
+// On mobile, forcing focus() opens the keyboard and eats up half the
+// screen (covering the map) right when the player just wants to look at it.
+// We only autofocus on devices with a fine pointer (mouse).
 const esDispositivoTactil = window.matchMedia('(pointer: coarse)').matches;
 
 function showScreen(name) {
@@ -72,9 +72,8 @@ function formatearTooltipCiudad(hecho, nivel) {
   return `${hecho.ciudad.nombre} — ${hecho.anio}: ${hecho.actividad}`;
 }
 
-// Se invoca en cada clic sobre un marcador del mapa: sube el nivel de pista
-// de esa ciudad (con penalización de puntos) y devuelve el texto que debe
-// mostrar el tooltip.
+// Called on every click on a map marker: raises the hint level for that
+// city (with a points penalty) and returns the text the tooltip should show.
 function onClickCiudad(indice) {
   const hecho = gameState.personaje.hechos[indice];
   gameState = revelarPista(gameState, indice);
@@ -136,24 +135,24 @@ function renderTurno() {
 }
 
 async function guardarPartidaAutomaticamente() {
-  el.guardarEstado.textContent = 'Guardando…';
+  el.guardarEstado.textContent = 'Saving…';
   try {
     const resultado = await saveGame(gameState, el.inputAliasJugador.value.trim() || getAlias());
     if (resultado.saved) {
       el.guardarEstado.textContent = '';
       actualizarPuntosTotales();
     } else if (resultado.reason === 'rate-limit') {
-      el.guardarEstado.textContent = 'Espera unos segundos antes de guardar otra partida.';
+      el.guardarEstado.textContent = 'Wait a few seconds before saving another game.';
     }
   } catch (err) {
     console.error(err);
-    el.guardarEstado.textContent = 'No se ha podido guardar la partida.';
+    el.guardarEstado.textContent = 'Could not save the game.';
   }
 }
 
 function renderFinDePartida() {
   const gano = gameState.acertado;
-  el.endResultado.textContent = gano ? '¡Has acertado!' : 'Turnos agotados';
+  el.endResultado.textContent = gano ? 'You got it!' : 'Out of turns';
   el.endPersonajeNombre.textContent = gameState.personaje.nombre;
   el.endPuntos.textContent = gameState.puntos;
 
@@ -161,14 +160,14 @@ function renderFinDePartida() {
   showScreen('end');
   invalidateSize();
 
-  // Si se ha acertado antes del último turno, aún faltan ciudades por pintar
-  // en el mapa: al terminar la partida se muestran las 4 siempre.
+  // If the player guessed before the last turn, some cities are still
+  // unrendered on the map: at the end of the game all 4 are always shown.
   const hechos = gameState.personaje.hechos;
   while (mapPintadoHasta < hechos.length) {
     addCiudad(hechos[mapPintadoHasta], mapPintadoHasta, onClickCiudad);
     mapPintadoHasta += 1;
   }
-  // Solo año por defecto; el hecho se revela al hacer clic en la ciudad (ver onClickCiudad).
+  // Year only by default; the fact is revealed on clicking the city (see onClickCiudad).
   mostrarTodasLasPistas((indice) => formatearTooltipCiudad(hechos[indice], 1));
 
   guardarPartidaAutomaticamente();
@@ -177,13 +176,13 @@ function renderFinDePartida() {
 async function iniciarPartida() {
   showScreen('game');
 
-  // El div del mapa se mueve a la pantalla final al terminar la partida
-  // (para mostrar las 4 ciudades allí); lo devolvemos a la de juego.
+  // The map div is moved to the end screen when the game finishes
+  // (to show the 4 cities there); we return it to the game screen.
   el.mapSlotGame.appendChild(document.getElementById('map'));
 
-  // Inicializar Leaflet solo cuando el contenedor ya es visible: si se crea
-  // el mapa dentro de un contenedor con display:none, Leaflet calcula mal
-  // su tamaño interno y invalidateSize() no lo corrige del todo.
+  // Only initialize Leaflet once the container is already visible: if the
+  // map is created inside a container with display:none, Leaflet miscalculates
+  // its internal size and invalidateSize() doesn't fully fix it.
   if (!mapInicializado) {
     initMap('map');
     mapInicializado = true;
@@ -207,7 +206,7 @@ async function iniciarPartida() {
   } catch (err) {
     console.error(err);
     el.turnoActual.textContent = '-';
-    alert('No se ha podido cargar un personaje. Comprueba la configuración de Supabase en js/config.js.');
+    alert('Could not load a character. Check the Supabase configuration in js/config.js.');
   }
 }
 
@@ -222,31 +221,31 @@ function avanzar(nuevoEstado) {
 
 function formatFecha(iso) {
   const d = new Date(iso);
-  return d.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  return d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 async function mostrarHistorial() {
   showScreen('history');
-  el.historialLista.innerHTML = '<li>Cargando…</li>';
+  el.historialLista.innerHTML = '<li>Loading…</li>';
   try {
     const partidas = await fetchHistorial();
     el.historialLista.innerHTML = '';
     if (partidas.length === 0) {
-      el.historialLista.innerHTML = '<li>Todavía no hay partidas jugadas.</li>';
+      el.historialLista.innerHTML = '<li>No games played yet.</li>';
       return;
     }
     partidas.forEach((p) => {
       const li = document.createElement('li');
-      const alias = p.alias ? p.alias : 'Anónimo';
+      const alias = p.alias ? p.alias : 'Anonymous';
       const resultado = p.acertado
-        ? `<span class="history-outcome-win">Acertó (${p.puntos} pts)</span>`
-        : '<span class="history-outcome-lose">No acertó</span>';
+        ? `<span class="history-outcome-win">Got it (${p.puntos} pts)</span>`
+        : '<span class="history-outcome-lose">Missed it</span>';
       li.innerHTML = `<span>${alias}</span><span>${resultado} · ${formatFecha(p.fecha)}</span>`;
       el.historialLista.appendChild(li);
     });
   } catch (err) {
     console.error(err);
-    el.historialLista.innerHTML = '<li>No se ha podido cargar el historial.</li>';
+    el.historialLista.innerHTML = '<li>Could not load the history.</li>';
   }
 }
 

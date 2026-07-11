@@ -1,12 +1,12 @@
 import { supabase } from './supabaseClient.js';
 import { elegirAlAzar } from './random.js';
 
-// Elige un personaje al azar (con sus hechos ordenados) excluyendo
-// opcionalmente el último jugado en este navegador.
+// Picks a random character (with their facts ordered) optionally
+// excluding the last one played in this browser.
 export async function fetchRandomPersonaje(excludeId) {
   const { data: personajes, error } = await supabase.from('personajes').select('id, nombre, nombres_alternativos');
   if (error) throw error;
-  if (!personajes || personajes.length === 0) throw new Error('No hay personajes disponibles');
+  if (!personajes || personajes.length === 0) throw new Error('No characters available');
 
   const elegido = elegirAlAzar(personajes, excludeId);
 
@@ -18,7 +18,7 @@ export async function fetchRandomPersonaje(excludeId) {
     .limit(4);
   if (errorHechos) throw errorHechos;
   if (!hechos || hechos.length < 4) {
-    throw new Error(`El personaje "${elegido.nombre}" no tiene suficientes hechos (mínimo 4)`);
+    throw new Error(`Character "${elegido.nombre}" doesn't have enough facts (minimum 4)`);
   }
 
   return {

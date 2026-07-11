@@ -15,8 +15,8 @@ function generarAliasAleatorio() {
   return `anonimo${numero}`;
 }
 
-// Alias del jugador en este navegador. Si es la primera vez, se genera uno
-// aleatorio ("anonimoNNN") y se guarda en caché para las próximas partidas.
+// Player's alias in this browser. If it's the first time, a random one
+// ("anonimoNNN") is generated and cached for future games.
 export function getAlias() {
   const guardado = localStorage.getItem(LOCALSTORAGE_KEYS.alias);
   if (guardado) return guardado;
@@ -30,7 +30,7 @@ export function setAlias(alias) {
   localStorage.setItem(LOCALSTORAGE_KEYS.alias, alias);
 }
 
-// true si ya se puede guardar (han pasado >= RATE_LIMIT_MS desde el último guardado).
+// true if saving is allowed now (>= RATE_LIMIT_MS have passed since the last save).
 export function puedeGuardar() {
   const ultimo = Number(localStorage.getItem(LOCALSTORAGE_KEYS.ultimoGuardadoTs) || 0);
   return Date.now() - ultimo >= RATE_LIMIT_MS;
@@ -40,7 +40,7 @@ function marcarGuardado() {
   localStorage.setItem(LOCALSTORAGE_KEYS.ultimoGuardadoTs, String(Date.now()));
 }
 
-// state: resultado final de game.js (createGameState procesado).
+// state: final result from game.js (a processed createGameState).
 export async function saveGame(state, alias) {
   if (!puedeGuardar()) {
     return { saved: false, reason: 'rate-limit' };
@@ -74,7 +74,7 @@ export async function saveGame(state, alias) {
   return { saved: true, partidaId: partida.id };
 }
 
-// Suma de puntos de todas las partidas guardadas de este alias.
+// Sum of points from all saved games for this alias.
 export async function fetchPuntosTotales(alias) {
   const { data, error } = await supabase.from('partidas').select('puntos').eq('alias', alias);
   if (error) throw error;

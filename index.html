@@ -1,74 +1,74 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adivina el personaje</title>
+  <title>Guess the Character</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="app-header">
-    <h1>Adivina el personaje</h1>
+    <h1>Guess the Character</h1>
     <div class="player-status">
-      <label for="input-alias-jugador" class="visually-hidden">Tu nombre</label>
+      <label for="input-alias-jugador" class="visually-hidden">Your name</label>
       <input id="input-alias-jugador" type="text" maxlength="40" autocomplete="off" class="alias-input" />
-      <span>Puntos: <strong id="puntos-actuales">0</strong></span>
+      <span>Points: <strong id="puntos-actuales">0</strong></span>
     </div>
-    <button id="btn-nav-historial" class="link-button" type="button">Ayuda</button>
+    <button id="btn-nav-historial" class="link-button" type="button">Help</button>
   </header>
 
   <main>
-    <!-- Pantalla de bienvenida -->
+    <!-- Welcome screen -->
     <section id="screen-welcome" class="screen">
       <div class="card">
-        <p>Voy a pensar en un personaje histórico.</p>
-        <p>Te daré pistas de lugares, fechas y actividades.</p>
-        <p><strong>Cuanto antes lo adivines, más puntos obtendrás.</strong></p>
-        <button id="btn-empezar" class="primary-button" type="button">Empezar</button>
+        <p>I'm thinking of a historical character.</p>
+        <p>I'll give you clues about places, dates, and activities.</p>
+        <p><strong>The sooner you guess, the more points you'll get.</strong></p>
+        <button id="btn-empezar" class="primary-button" type="button">Start</button>
       </div>
     </section>
 
-    <!-- Pantalla de juego -->
+    <!-- Game screen -->
     <section id="screen-game" class="screen hidden">
       <div id="map-slot-game"><div id="map"></div></div>
 
       <div class="game-status" aria-live="polite">
-        <span>Turno <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
-        <span>En juego: <strong id="puntos-en-juego">100</strong></span>
+        <span>Turn <strong id="turno-actual">1</strong> / <span id="turno-max">4</span></span>
+        <span>In play: <strong id="puntos-en-juego">100</strong></span>
       </div>
 
       <ul id="lista-fallos" class="fail-list" aria-live="polite"></ul>
 
       <form id="form-respuesta" class="answer-form">
-        <label for="input-nombre" class="visually-hidden">Nombre del personaje</label>
-        <input id="input-nombre" type="text" placeholder="¿Quién es?" autocomplete="off" />
-        <button id="btn-adivinar" class="primary-button" type="submit">Adivinar</button>
-        <button id="btn-paso" class="secondary-button" type="button">Paso</button>
+        <label for="input-nombre" class="visually-hidden">Character name</label>
+        <input id="input-nombre" type="text" placeholder="Who is it?" autocomplete="off" />
+        <button id="btn-adivinar" class="primary-button" type="submit">Guess</button>
+        <button id="btn-paso" class="secondary-button" type="button">Skip</button>
       </form>
     </section>
 
-    <!-- Pantalla de fin de partida -->
+    <!-- End of game screen -->
     <section id="screen-end" class="screen hidden">
       <div class="card">
         <h2 id="end-resultado"></h2>
-        <p>El personaje era: <strong id="end-personaje-nombre"></strong>. Sumas <strong id="end-puntos"></strong> puntos</p>
+        <p>The character was: <strong id="end-personaje-nombre"></strong>. You scored <strong id="end-puntos"></strong> points</p>
         <div id="map-slot-end"></div>
         <p id="guardar-estado" class="save-status" aria-live="polite"></p>
 
-        <button id="btn-jugar-de-nuevo" class="primary-button" type="button">Jugar de nuevo</button>
+        <button id="btn-jugar-de-nuevo" class="primary-button" type="button">Play again</button>
       </div>
     </section>
 
-    <!-- Pantalla de historial -->
+    <!-- History screen -->
     <section id="screen-history" class="screen hidden">
       <div class="card">
-        <h3>Ayuda</h3>
-        <p class="muted">Cada ciudad mostrada resta 10 puntos.</p>
-        <p class="muted">El primer clic en una ciudad muestra su año y resta 10 puntos.</p>
-        <p class="muted">A partir de ahí, cada clic en una ciudad muestra año y actividad y resta 10 puntos.</p>
-        <button id="btn-volver-desde-historial" class="primary-button" type="button">Volver</button>
-        <h3>Historial de partidas</h3>
+        <h3>Help</h3>
+        <p class="muted">Each city shown subtracts 10 points.</p>
+        <p class="muted">The first click on a city reveals its year and subtracts 10 points.</p>
+        <p class="muted">From then on, each click on a city reveals the year and activity and subtracts 10 points.</p>
+        <button id="btn-volver-desde-historial" class="primary-button" type="button">Back</button>
+        <h3>Game history</h3>
         <ul id="historial-lista" class="history-list"></ul>
       </div>
     </section>

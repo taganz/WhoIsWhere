@@ -1,8 +1,8 @@
-// Lógica pura de selección al azar: no toca el DOM ni Supabase.
+// Pure random-selection logic: doesn't touch the DOM or Supabase.
 
-// Elige un elemento al azar de `items` excluyendo opcionalmente `excludeId`
-// (el último jugado en este navegador). Si tras excluirlo no queda ninguno,
-// se permite repetir.
+// Picks a random item from `items`, optionally excluding `excludeId`
+// (the last one played in this browser). If none are left after
+// excluding it, repeating is allowed.
 export function elegirAlAzar(items, excludeId) {
   let candidatos = items;
   if (excludeId != null) {

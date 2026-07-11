@@ -1,7 +1,7 @@
--- Esquema Supabase para el juego "Adivina el personaje"
--- Ejecutar una vez en el SQL Editor de Supabase.
+-- Supabase schema for the "Guess the Character" game
+-- Run once in the Supabase SQL Editor.
 
--- ==== TABLAS ====
+-- ==== TABLES ====
 
 create table ciudades (
   id     serial primary key,
@@ -53,17 +53,17 @@ alter table hechos             enable row level security;
 alter table partidas           enable row level security;
 alter table respuestas_partida enable row level security;
 
--- Lectura pública de catálogo (personajes / hechos / ciudades)
+-- Public read access to the catalog (personajes / hechos / ciudades)
 create policy "ciudades_select_public"   on ciudades   for select using (true);
 create policy "personajes_select_public" on personajes for select using (true);
 create policy "hechos_select_public"     on hechos     for select using (true);
 
--- partidas: lectura pública (historial) + inserción pública. Sin update/delete
--- (denegado por defecto al no existir política para esas operaciones).
--- La política de SELECT es también necesaria para poder leer el id devuelto
--- por .insert(...).select().single() al crear una partida.
+-- partidas: public read (history) + public insert. No update/delete
+-- (denied by default since no policy exists for those operations).
+-- The SELECT policy is also needed to read the id returned by
+-- .insert(...).select().single() when creating a partida.
 create policy "partidas_select_public" on partidas for select using (true);
 create policy "partidas_insert_public" on partidas for insert with check (true);
 
--- respuestas_partida: solo inserción pública (no se lee desde el cliente).
+-- respuestas_partida: insert-only, public (never read from the client).
 create policy "respuestas_insert_public" on respuestas_partida for insert with check (true);

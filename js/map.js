@@ -1,4 +1,4 @@
-// Envoltorio de Leaflet: marcadores de ciudades reveladas unidos por una curva.
+// Leaflet wrapper: markers for revealed cities joined by a curve.
 
 let map = null;
 let markers = [];
@@ -46,19 +46,19 @@ function bezierPoints(p0, p1, curvature = 0.2, segments = 40) {
 }
 
 // hecho: { ciudad: { nombre, lat, lon }, anio, actividad }
-// onClickCiudad(indice) se llama en cada clic sobre el marcador y debe
-// devolver el texto a mostrar en el tooltip para ese momento.
+// onClickCiudad(indice) is called on every click on the marker and must
+// return the text to show in the tooltip at that moment.
 export function addCiudad(hecho, indice, onClickCiudad) {
   const ciudad = hecho.ciudad;
-  // autoClose/closeOnClick a false: al terminar la partida se abren los
-  // popups de las 4 ciudades a la vez y deben permanecer todos visibles.
+  // autoClose/closeOnClick set to false: when the game ends, the popups
+  // for all 4 cities open at once and must all stay visible.
   const marker = L.marker([ciudad.lat, ciudad.lon])
     .addTo(map)
     .bindPopup(ciudad.nombre, { autoClose: false, closeOnClick: false });
 
-  // Leaflet, por defecto, alterna abrir/cerrar el popup en cada clic sobre el
-  // marcador. Sustituimos ese comportamiento para que cada clic actualice el
-  // contenido (nombre -> año -> año + hecho) y lo mantenga siempre abierto.
+  // By default, Leaflet toggles the popup open/closed on every click on
+  // the marker. We replace that behavior so each click updates the
+  // content (name -> year -> year + fact) and keeps it always open.
   marker.off('click');
   marker.on('click', () => {
     marker.setPopupContent(onClickCiudad(indice));
@@ -87,8 +87,8 @@ export function addCiudad(hecho, indice, onClickCiudad) {
   }
 }
 
-// Al terminar la partida: abre a la vez el tooltip de todas las ciudades
-// reveladas. formatear(indice) debe devolver el texto final para cada una.
+// When the game ends: opens the tooltip for all revealed cities at once.
+// formatear(indice) must return the final text for each one.
 export function mostrarTodasLasPistas(formatear) {
   markers.forEach((marker, indice) => {
     marker.setPopupContent(formatear(indice));
