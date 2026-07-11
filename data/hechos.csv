@@ -1,229 +1,229 @@
-personaje,ciudad,anio,actividad,orden
-Cristóbal Colón,Génova,1451,Nace en el seno de una familia de tejedores,1
-Cristóbal Colón,Lisboa,1477,Se instala y aprende náutica y cartografía,2
-Cristóbal Colón,Palos de la Frontera,1492,"Zarpa hacia las Indias con la Niña, la Pinta y la Santa María",3
-Cristóbal Colón,San Salvador (Bahamas),1492,Llega a tierra tras cruzar el Atlántico,4
-Cristóbal Colón,Barcelona,1493,Es recibido por los Reyes Católicos tras su primer viaje,5
-Cristóbal Colón,Valladolid,1506,Muere sin saber que había llegado a un nuevo continente,6
-Marie Curie,Varsovia,1867,Nace y crece en la Polonia bajo dominio ruso,1
-Marie Curie,París,1891,Se traslada a estudiar Física y Matemáticas en la Sorbona,2
-Marie Curie,Estocolmo,1903,Recibe el Premio Nobel de Física junto a Pierre Curie y Henri Becquerel,3
-Marie Curie,Nueva York,1921,Realiza una gira por Estados Unidos y recibe un gramo de radio,4
-Marie Curie,París,1934,Muere en Passy a causa de una anemia aplásica,5
-Leonardo da Vinci,Vinci,1452,"Nace cerca de Florencia, hijo de un notario",1
-Leonardo da Vinci,Florencia,1466,Entra como aprendiz en el taller de Verrocchio,2
-Leonardo da Vinci,Milán,1482,"Se pone al servicio de Ludovico Sforza y pinta ""La Última Cena""",3
-Leonardo da Vinci,Roma,1513,Trabaja para la familia Médici en el Vaticano,4
-Leonardo da Vinci,Amboise,1516,Se traslada a Francia invitado por el rey Francisco I,5
-Leonardo da Vinci,Amboise,1519,"Muere en el castillo de Cloux, cerca de Amboise",6
-Wolfgang Amadeus Mozart,Salzburgo,1756,Nace mostrando un talento musical precoz desde niño,1
-Wolfgang Amadeus Mozart,Viena,1781,Se instala en la ciudad como compositor independiente,2
-Wolfgang Amadeus Mozart,Praga,1787,"Estrena con gran éxito la ópera ""Don Giovanni""",3
-Wolfgang Amadeus Mozart,Viena,1791,"Muere joven dejando inacabado su ""Requiem""",4
-Ludwig van Beethoven,Bonn,1770,Nace en una familia de músicos al servicio de la corte,1
-Ludwig van Beethoven,Viena,1792,Se traslada a la ciudad para estudiar con Joseph Haydn,2
-Ludwig van Beethoven,Viena,1808,Estrena su Quinta Sinfonía pese a ir perdiendo el oído,3
-Ludwig van Beethoven,Viena,1827,Muere en la ciudad ya completamente sordo,4
-Johann Sebastian Bach,Eisenach,1685,Nace en una extensa familia de músicos alemanes,1
-Johann Sebastian Bach,Weimar,1708,Trabaja como organista y compositor de la corte,2
-Johann Sebastian Bach,Leipzig,1723,Se convierte en cantor de la iglesia de Santo Tomás,3
-Johann Sebastian Bach,Leipzig,1750,Muere tras dejar una obra musical inmensa,4
-Frédéric Chopin,Varsovia,1810,Nace y muestra un talento precoz para el piano,1
-Frédéric Chopin,Varsovia,1830,Abandona Polonia tras el estallido de una revuelta contra Rusia,2
-Frédéric Chopin,París,1832,Se instala en la ciudad como pianista y compositor de referencia,3
-Frédéric Chopin,Valldemossa,1838,Pasa un invierno buscando mejorar su salud junto a George Sand,4
-Frédéric Chopin,París,1849,Muere en la ciudad a causa de la tuberculosis,5
-Pablo Picasso,Málaga,1881,Nace y comienza a dibujar desde niño,1
-Pablo Picasso,Barcelona,1900,Se traslada con su familia y frecuenta ambientes artísticos bohemios,2
-Pablo Picasso,París,1907,"Pinta ""Las señoritas de Avignon"", germen del cubismo",3
-Pablo Picasso,París,1937,"Pinta el ""Guernica"" en respuesta al bombardeo de la localidad vasca",4
-Pablo Picasso,Mougins,1973,Muere en su residencia del sur de Francia,5
-Vincent van Gogh,Zundert,1853,Nace hijo de un pastor protestante,1
-Vincent van Gogh,La Haya,1881,Comienza a dedicarse en serio a la pintura,2
-Vincent van Gogh,Arlés,1888,"Pinta algunas de sus obras más conocidas, como ""Los Girasoles""",3
-Vincent van Gogh,Auvers-sur-Oise,1890,Muere sin haber vendido apenas cuadros en vida,4
-Salvador Dalí,Figueras,1904,Nace en el seno de una familia acomodada catalana,1
-Salvador Dalí,Madrid,1922,Estudia en la Residencia de Estudiantes junto a Lorca y Buñuel,2
-Salvador Dalí,París,1929,Se une al movimiento surrealista,3
-Salvador Dalí,Nueva York,1939,Expone y se hace célebre en Estados Unidos,4
-Salvador Dalí,Figueras,1989,Muere en su ciudad natal,5
-Frida Kahlo,Ciudad de México,1907,Nace en la Casa Azul de su familia,1
-Frida Kahlo,Ciudad de México,1925,Sufre un grave accidente de autobús que marcará su vida y su obra,2
-Frida Kahlo,Ciudad de México,1929,Se casa con el muralista Diego Rivera,3
-Frida Kahlo,Nueva York,1938,Expone su obra con gran éxito de crítica,4
-Frida Kahlo,Ciudad de México,1954,Muere en la misma casa donde nació,5
-Diego Rivera,Guanajuato,1886,Nace en una familia de clase media mexicana,1
-Diego Rivera,París,1909,Vive y pinta influido por el cubismo europeo,2
-Diego Rivera,Ciudad de México,1933,Pinta murales sobre la historia y la revolución mexicana,3
-Diego Rivera,Ciudad de México,1957,Muere tras una vida dedicada al muralismo,4
-Miguel Ángel Buonarroti,Caprese,1475,Nace en una pequeña localidad de la Toscana,1
-Miguel Ángel Buonarroti,Florencia,1490,Se forma en el taller de Ghirlandaio y en el entorno de los Médici,2
-Miguel Ángel Buonarroti,Roma,1508,Pinta el techo de la Capilla Sixtina,3
-Miguel Ángel Buonarroti,Roma,1564,"Muere tras una vida dedicada a la escultura, la pintura y la arquitectura",4
-Amelia Earhart,Atchison,1897,Nace en una familia de clase media estadounidense,1
-Amelia Earhart,Los Ángeles,1921,Aprende a volar y compra su primer avión,2
-Amelia Earhart,París,1932,Se convierte en la primera mujer en cruzar el Atlántico en solitario,3
-Amelia Earhart,Isla Howland,1937,Desaparece durante un intento de dar la vuelta al mundo,4
-William Shakespeare,Stratford-upon-Avon,1564,Nace en una familia de comerciantes,1
-William Shakespeare,Londres,1592,Triunfa como dramaturgo y actor en los teatros de la ciudad,2
-William Shakespeare,Londres,1599,Estrena obras en el recién construido Teatro Globe,3
-William Shakespeare,Stratford-upon-Avon,1616,Muere en su ciudad natal tras retirarse de los escenarios,4
-Miguel de Cervantes,Alcalá de Henares,1547,Nace en una familia de escasos recursos,1
-Miguel de Cervantes,Lepanto,1571,Participa en la batalla naval y pierde el uso de una mano,2
-Miguel de Cervantes,Argel,1575,Es capturado por piratas berberiscos y permanece cautivo varios años,3
-Miguel de Cervantes,Madrid,1605,"Publica la primera parte de ""Don Quijote de la Mancha""",4
-Miguel de Cervantes,Madrid,1616,Muere en la pobreza pese al éxito de su obra,5
-Ernest Hemingway,Oak Park,1899,Nace en una familia acomodada de un suburbio de Chicago,1
-Ernest Hemingway,Milán,1918,Es herido como voluntario de ambulancias en la Primera Guerra Mundial,2
-Ernest Hemingway,París,1921,"Vive como parte de la ""generación perdida"" de escritores estadounidenses",3
-Ernest Hemingway,La Habana,1939,Se instala y escribe algunas de sus obras más conocidas,4
-Ernest Hemingway,Ketchum,1961,Muere en su casa de Idaho,5
-Mark Twain,Florida (Misuri),1835,Nace en un pequeño pueblo de Misuri,1
-Mark Twain,Hannibal,1857,"Trabaja como piloto de barcos de vapor en el Misisipi, experiencia que marcará su obra",2
-Mark Twain,Hartford,1876,"Publica ""Las aventuras de Tom Sawyer""",3
-Mark Twain,Redding,1910,Muere en su casa de Connecticut,4
-Jane Austen,Steventon,1775,Nace hija de un pastor rural inglés,1
-Jane Austen,Bath,1801,Se traslada con su familia a esta ciudad balneario,2
-Jane Austen,Chawton,1811,"Publica de forma anónima ""Sentido y sensibilidad""",3
-Jane Austen,Winchester,1817,Muere sin haber visto reconocido públicamente su nombre como autora,4
-Charles Dickens,Portsmouth,1812,Nace hijo de un empleado de la marina,1
-Charles Dickens,Londres,1836,"Publica ""Los papeles póstumos del Club Pickwick"" y alcanza gran popularidad",2
-Charles Dickens,Londres,1843,"Publica ""Cuento de Navidad""",3
-Charles Dickens,Gads Hill Place,1870,Muere en su residencia de Kent,4
-Virginia Woolf,Londres,1882,Nace en una familia culta de la época victoriana,1
-Virginia Woolf,Londres,1912,Se casa con Leonard Woolf y forma parte del círculo de Bloomsbury,2
-Virginia Woolf,Londres,1925,"Publica ""La señora Dalloway""",3
-Virginia Woolf,Rodmell,1941,Muere ahogada en el río Ouse cerca de su casa,4
-Gabriel García Márquez,Aracataca,1927,Nace en un pequeño pueblo de la costa caribeña colombiana,1
-Gabriel García Márquez,Barranquilla,1950,Trabaja como periodista y comienza a escribir sus primeros relatos,2
-Gabriel García Márquez,Ciudad de México,1967,"Publica ""Cien años de soledad""",3
-Gabriel García Márquez,Estocolmo,1982,Recibe el Premio Nobel de Literatura,4
-Gabriel García Márquez,Ciudad de México,2014,Muere en su casa de México,5
-Pablo Neruda,Parral,1904,Nace en el sur de Chile,1
-Pablo Neruda,Santiago de Chile,1923,"Publica ""Veinte poemas de amor y una canción desesperada""",2
-Pablo Neruda,Madrid,1935,Vive como diplomático chileno durante los años previos a la Guerra Civil española,3
-Pablo Neruda,Estocolmo,1971,Recibe el Premio Nobel de Literatura,4
-Pablo Neruda,Isla Negra,1973,Muere pocos días después del golpe de Estado en Chile,5
-Isaac Newton,Woolsthorpe,1643,Nace de forma prematura tras la muerte de su padre,1
-Isaac Newton,Cambridge,1665,Desarrolla parte de sus teorías sobre la gravedad durante una epidemia de peste,2
-Isaac Newton,Londres,1687,"Publica los ""Principia Mathematica""",3
-Isaac Newton,Londres,1727,Muere tras dirigir durante años la Casa de la Moneda británica,4
-Albert Einstein,Ulm,1879,Nace en una familia judía alemana,1
-Albert Einstein,Berna,1905,"Publica varios artículos revolucionarios, entre ellos la teoría de la relatividad especial",2
-Albert Einstein,Berlín,1915,Presenta la teoría de la relatividad general,3
-Albert Einstein,Princeton,1955,Muere tras años dedicado a la física teórica en Estados Unidos,4
-Charles Darwin,Shrewsbury,1809,Nace en una familia acomodada inglesa,1
-Charles Darwin,Islas Galápagos,1835,Observa la fauna que inspirará su teoría de la evolución,2
-Charles Darwin,Londres,1859,"Publica ""El origen de las especies""",3
-Charles Darwin,Downe,1882,Muere en su casa de campo tras décadas de investigación,4
-Nikola Tesla,Smiljan,1856,Nace en el seno de una familia serbia,1
-Nikola Tesla,Nueva York,1884,Emigra a Estados Unidos y trabaja brevemente con Thomas Edison,2
-Nikola Tesla,Colorado Springs,1899,Realiza experimentos con corriente eléctrica de alta frecuencia,3
-Nikola Tesla,Nueva York,1943,Muere solo en una habitación de hotel,4
-Thomas Edison,Milan (Ohio),1847,Nace en un pequeño pueblo de Ohio,1
-Thomas Edison,Menlo Park,1879,Desarrolla la primera bombilla incandescente comercialmente viable,2
-Thomas Edison,Nueva York,1882,Pone en marcha la primera central eléctrica comercial del mundo,3
-Thomas Edison,West Orange,1931,Muere tras registrar más de mil patentes,4
-Galileo Galilei,Pisa,1564,Nace en una familia de músicos y comerciantes,1
-Galileo Galilei,Padua,1609,Mejora el telescopio y descubre las lunas de Júpiter,2
-Galileo Galilei,Roma,1633,Es juzgado por la Inquisición por defender el heliocentrismo,3
-Galileo Galilei,Florencia,1642,Muere bajo arresto domiciliario,4
-Nicolás Copérnico,Toruń,1473,Nace en una familia de comerciantes polacos,1
-Nicolás Copérnico,Bolonia,1496,"Estudia astronomía, derecho y medicina en Italia",2
-Nicolás Copérnico,Frombork,1510,Se instala como canónigo y desarrolla sus observaciones astronómicas,3
-Nicolás Copérnico,Frombork,1543,Muere poco después de publicar su obra sobre el heliocentrismo,4
-Alexander Fleming,Lochfield,1881,Nace en una granja escocesa,1
-Alexander Fleming,Londres,1906,Se forma como médico y bacteriólogo,2
-Alexander Fleming,Londres,1928,Descubre por accidente la penicilina en su laboratorio,3
-Alexander Fleming,Londres,1955,Muere tras revolucionar la medicina con los antibióticos,4
-Louis Pasteur,Dole,1822,Nace en una familia de curtidores franceses,1
-Louis Pasteur,Lille,1856,Investiga la fermentación y desarrolla el proceso de pasteurización,2
-Louis Pasteur,París,1885,Aplica con éxito la primera vacuna contra la rabia en un ser humano,3
-Louis Pasteur,Marnes-la-Coquette,1895,Muere cerca de París tras fundar el instituto que lleva su nombre,4
-Stephen Hawking,Oxford,1942,Nace durante la Segunda Guerra Mundial,1
-Stephen Hawking,Cambridge,1963,Es diagnosticado con una enfermedad degenerativa que le da pocos años de vida,2
-Stephen Hawking,Cambridge,1988,"Publica ""Breve historia del tiempo""",3
-Stephen Hawking,Cambridge,2018,Muere tras décadas investigando los agujeros negros,4
-Sigmund Freud,Příbor,1856,Nace en una pequeña ciudad de Moravia,1
-Sigmund Freud,Viena,1886,Abre su consulta y comienza a desarrollar el psicoanálisis,2
-Sigmund Freud,Viena,1900,"Publica ""La interpretación de los sueños""",3
-Sigmund Freud,Londres,1939,Muere en el exilio tras huir del nazismo,4
-Karl Marx,Tréveris,1818,Nace en una familia de abogados alemanes,1
-Karl Marx,París,1844,Traba amistad con Friedrich Engels y desarrolla sus ideas económicas,2
-Karl Marx,Bruselas,1848,"Publica junto a Engels ""El manifiesto comunista""",3
-Karl Marx,Londres,1883,"Muere en el exilio tras dedicar años a escribir ""El Capital""",4
-Ada Lovelace,Londres,1815,Nace hija del poeta Lord Byron,1
-Ada Lovelace,Londres,1835,"Se casa con William King, conde de Lovelace",2
-Ada Lovelace,Londres,1843,Publica notas sobre la máquina analítica de Babbage consideradas el primer algoritmo informático,3
-Ada Lovelace,Londres,1852,Muere joven a causa de un cáncer,4
-Sócrates,Atenas,-470,Nace en el seno de una familia humilde ateniense,1
-Sócrates,Potidea,-432,Participa como hoplita en el asedio de Potidea,2
-Sócrates,Delio,-424,Combate en la batalla de Delio durante la Guerra del Peloponeso,3
-Sócrates,Atenas,-399,Es condenado a muerte y muere bebiendo cicuta,4
-Platón,Atenas,-428,Nace en una familia aristocrática ateniense,1
-Platón,Atenas,-387,"Funda la Academia, una de las primeras instituciones de enseñanza superior",2
-Platón,Siracusa,-367,Viaja a Sicilia para intentar formar a un gobernante filósofo,3
-Platón,Atenas,-348,Muere en su ciudad natal,4
-Aristóteles,Estagira,-384,Nace en una ciudad griega del norte,1
-Aristóteles,Atenas,-367,Se traslada para estudiar en la Academia de Platón,2
-Aristóteles,Pella,-343,Es tutor del joven Alejandro Magno en la corte macedonia,3
-Aristóteles,Atenas,-335,"Funda su propia escuela, el Liceo",4
-Aristóteles,Calcis,-322,Muere en el exilio tras la muerte de Alejandro Magno,5
-Marie Antoinette,Viena,1755,Nace como archiduquesa de Austria,1
-Marie Antoinette,Versalles,1770,Se casa con el futuro Luis XVI de Francia,2
-Marie Antoinette,Versalles,1789,Vive el estallido de la Revolución Francesa,3
-Marie Antoinette,París,1793,Muere guillotinada durante el Terror revolucionario,4
-Julio César,Roma,-100,Nace en una familia patricia romana,1
-Julio César,Alesia,-52,Vence a Vercingétorix tras el asedio que sella la conquista de la Galia,2
-Julio César,Roma,-49,Cruza el Rubicón e inicia una guerra civil,3
-Julio César,Roma,-44,Muere asesinado por senadores el día de los Idus de marzo,4
-Cleopatra,Alejandría,-69,Nace en la dinastía ptolemaica de Egipto,1
-Cleopatra,Alejandría,-48,Se convierte en aliada y compañera de Julio César,2
-Cleopatra,Actium,-31,Es derrotada junto a Marco Antonio en la batalla naval de Actium,3
-Cleopatra,Alejandría,-30,Muere tras la conquista romana de Egipto,4
-Alejandro Magno,Pella,-356,Nace heredero del trono de Macedonia,1
-Alejandro Magno,Queronea,-338,Combate de forma decisiva junto a su padre Filipo II,2
-Alejandro Magno,Gaugamela,-331,Derrota al imperio persa de Darío III,3
-Alejandro Magno,Babilonia,-323,Muere joven en la ciudad que había hecho capital de su imperio,4
-Juana de Arco,Domrémy,1412,Nace en una familia campesina de Lorena,1
-Juana de Arco,Orleans,1429,Libera la ciudad del asedio inglés,2
-Juana de Arco,Reims,1429,Acompaña la coronación de Carlos VII como rey de Francia,3
-Juana de Arco,Ruan,1431,Muere en la hoguera acusada de herejía,4
-Napoleón Bonaparte,Ajaccio,1769,Nace en una familia de la pequeña nobleza corsa,1
-Napoleón Bonaparte,Tolón,1793,Se distingue militarmente durante el asedio de la ciudad,2
-Napoleón Bonaparte,París,1804,Se corona emperador de los franceses,3
-Napoleón Bonaparte,Waterloo,1815,Sufre su derrota militar definitiva,4
-Napoleón Bonaparte,Santa Elena,1821,Muere en el exilio en una isla del Atlántico Sur,5
-Simón Bolívar,Caracas,1783,Nace en una familia acomodada criolla,1
-Simón Bolívar,Bogotá,1819,Libera Nueva Granada tras la batalla de Boyacá,2
-Simón Bolívar,Lima,1824,Consuma la independencia de Perú,3
-Simón Bolívar,Santa Marta,1830,Muere enfermo tras la fragmentación de la Gran Colombia,4
-Mahatma Gandhi,Porbandar,1869,Nace en una familia hindú de la costa oeste de la India,1
-Mahatma Gandhi,Johannesburgo,1893,Desarrolla su método de resistencia no violenta durante su etapa en Sudáfrica,2
-Mahatma Gandhi,Dandi,1930,Encabeza la Marcha de la Sal contra el monopolio británico,3
-Mahatma Gandhi,Nueva Delhi,1948,Muere asesinado poco después de la independencia de la India,4
-Nelson Mandela,Mvezo,1918,Nace en una familia de la realeza local xhosa,1
-Nelson Mandela,Johannesburgo,1962,Es arrestado tras años de lucha contra el apartheid,2
-Nelson Mandela,Robben Island,1964,Es condenado a cadena perpetua y encarcelado en la isla,3
-Nelson Mandela,Ciudad del Cabo,1990,Es liberado tras 27 años de prisión,4
-Nelson Mandela,Johannesburgo,2013,Muere tras convertirse en el primer presidente negro de Sudáfrica,5
-Martin Luther King,Atlanta,1929,Nace hijo de un pastor baptista,1
-Martin Luther King,Montgomery,1955,Lidera el boicot a los autobuses tras el arresto de Rosa Parks,2
-Martin Luther King,Washington D.C.,1963,"Pronuncia su discurso ""I Have a Dream""",3
-Martin Luther King,Memphis,1968,Muere asesinado en el balcón de un motel,4
-Abraham Lincoln,Hodgenville,1809,Nace en una cabaña de madera,1
-Abraham Lincoln,Springfield (Illinois),1860,Es elegido presidente de Estados Unidos,2
-Abraham Lincoln,Gettysburg,1863,Pronuncia su célebre discurso durante la Guerra Civil,3
-Abraham Lincoln,Washington D.C.,1865,Muere asesinado poco después de terminar la guerra,4
-Winston Churchill,Blenheim,1874,Nace en el palacio familiar de los Churchill,1
-Winston Churchill,Londres,1940,Se convierte en primer ministro británico al inicio de la Segunda Guerra Mundial,2
-Winston Churchill,Londres,1945,Lidera al Reino Unido hasta la victoria aliada,3
-Winston Churchill,Londres,1965,Muere tras una larga carrera política,4
-Marco Polo,Venecia,1254,Nace en una familia de comerciantes venecianos,1
-Marco Polo,Pekín,1275,Llega a la corte del emperador mongol Kublai Kan,2
-Marco Polo,Génova,1298,Es hecho prisionero y dicta el relato de sus viajes,3
-Marco Polo,Venecia,1324,Muere en su ciudad natal,4
-Fernando de Magallanes,Sabrosa,1480,Nace en una familia de la baja nobleza portuguesa,1
-Fernando de Magallanes,Sevilla,1519,Zarpa al mando de una expedición para encontrar una ruta occidental a Asia,2
-Fernando de Magallanes,Filipinas (Mactán),1521,Muere en un enfrentamiento con habitantes locales,3
-Fernando de Magallanes,Sanlúcar de Barrameda,1522,"Su expedición completa la primera vuelta al mundo, aunque él ya no vive para verlo",4
+personaje,ciudad,anio,actividad,orden,palabra_clave
+Cristóbal Colón,Génova,1451,Nace en el seno de una familia de tejedores,1,Nacimiento
+Cristóbal Colón,Lisboa,1477,Se instala y aprende náutica y cartografía,2,Formación
+Cristóbal Colón,Palos de la Frontera,1492,"Zarpa hacia las Indias con la Niña, la Pinta y la Santa María",3,Zarpa
+Cristóbal Colón,San Salvador (Bahamas),1492,Llega a tierra tras cruzar el Atlántico,4,Llegada
+Cristóbal Colón,Barcelona,1493,Es recibido por los Reyes Católicos tras su primer viaje,5,Recibimiento
+Cristóbal Colón,Valladolid,1506,Muere sin saber que había llegado a un nuevo continente,6,Muerte
+Marie Curie,Varsovia,1867,Nace y crece en la Polonia bajo dominio ruso,1,Nacimiento
+Marie Curie,París,1891,Se traslada a estudiar Física y Matemáticas en la Sorbona,2,Estudios
+Marie Curie,Estocolmo,1903,Recibe el Premio Nobel de Física junto a Pierre Curie y Henri Becquerel,3,Nobel
+Marie Curie,Nueva York,1921,Realiza una gira por Estados Unidos y recibe un gramo de radio,4,Gira
+Marie Curie,París,1934,Muere en Passy a causa de una anemia aplásica,5,Muerte
+Leonardo da Vinci,Vinci,1452,"Nace cerca de Florencia, hijo de un notario",1,Nacimiento
+Leonardo da Vinci,Florencia,1466,Entra como aprendiz en el taller de Verrocchio,2,Aprendizaje
+Leonardo da Vinci,Milán,1482,"Se pone al servicio de Ludovico Sforza y pinta ""La Última Cena""",3,Pintura
+Leonardo da Vinci,Roma,1513,Trabaja para la familia Médici en el Vaticano,4,Vaticano
+Leonardo da Vinci,Amboise,1516,Se traslada a Francia invitado por el rey Francisco I,5,Traslado
+Leonardo da Vinci,Amboise,1519,"Muere en el castillo de Cloux, cerca de Amboise",6,Muerte
+Wolfgang Amadeus Mozart,Salzburgo,1756,Nace mostrando un talento musical precoz desde niño,1,Nacimiento
+Wolfgang Amadeus Mozart,Viena,1781,Se instala en la ciudad como compositor independiente,2,Instalación
+Wolfgang Amadeus Mozart,Praga,1787,"Estrena con gran éxito la ópera ""Don Giovanni""",3,Estreno
+Wolfgang Amadeus Mozart,Viena,1791,"Muere joven dejando inacabado su ""Requiem""",4,Muerte
+Ludwig van Beethoven,Bonn,1770,Nace en una familia de músicos al servicio de la corte,1,Nacimiento
+Ludwig van Beethoven,Viena,1792,Se traslada a la ciudad para estudiar con Joseph Haydn,2,Estudios
+Ludwig van Beethoven,Viena,1808,Estrena su Quinta Sinfonía pese a ir perdiendo el oído,3,Estreno
+Ludwig van Beethoven,Viena,1827,Muere en la ciudad ya completamente sordo,4,Muerte
+Johann Sebastian Bach,Eisenach,1685,Nace en una extensa familia de músicos alemanes,1,Nacimiento
+Johann Sebastian Bach,Weimar,1708,Trabaja como organista y compositor de la corte,2,Organista
+Johann Sebastian Bach,Leipzig,1723,Se convierte en cantor de la iglesia de Santo Tomás,3,Cantor
+Johann Sebastian Bach,Leipzig,1750,Muere tras dejar una obra musical inmensa,4,Muerte
+Frédéric Chopin,Varsovia,1810,Nace y muestra un talento precoz para el piano,1,Nacimiento
+Frédéric Chopin,Varsovia,1830,Abandona Polonia tras el estallido de una revuelta contra Rusia,2,Exilio
+Frédéric Chopin,París,1832,Se instala en la ciudad como pianista y compositor de referencia,3,Instalación
+Frédéric Chopin,Valldemossa,1838,Pasa un invierno buscando mejorar su salud junto a George Sand,4,Invierno
+Frédéric Chopin,París,1849,Muere en la ciudad a causa de la tuberculosis,5,Muerte
+Pablo Picasso,Málaga,1881,Nace y comienza a dibujar desde niño,1,Nacimiento
+Pablo Picasso,Barcelona,1900,Se traslada con su familia y frecuenta ambientes artísticos bohemios,2,Bohemia
+Pablo Picasso,París,1907,"Pinta ""Las señoritas de Avignon"", germen del cubismo",3,Cubismo
+Pablo Picasso,París,1937,"Pinta el ""Guernica"" en respuesta al bombardeo de la localidad vasca",4,Pintura
+Pablo Picasso,Mougins,1973,Muere en su residencia del sur de Francia,5,Muerte
+Vincent van Gogh,Zundert,1853,Nace hijo de un pastor protestante,1,Nacimiento
+Vincent van Gogh,La Haya,1881,Comienza a dedicarse en serio a la pintura,2,Pintura
+Vincent van Gogh,Arlés,1888,"Pinta algunas de sus obras más conocidas, como ""Los Girasoles""",3,Pintura
+Vincent van Gogh,Auvers-sur-Oise,1890,Muere sin haber vendido apenas cuadros en vida,4,Muerte
+Salvador Dalí,Figueras,1904,Nace en el seno de una familia acomodada catalana,1,Nacimiento
+Salvador Dalí,Madrid,1922,Estudia en la Residencia de Estudiantes junto a Lorca y Buñuel,2,Estudios
+Salvador Dalí,París,1929,Se une al movimiento surrealista,3,Surrealismo
+Salvador Dalí,Nueva York,1939,Expone y se hace célebre en Estados Unidos,4,Exposición
+Salvador Dalí,Figueras,1989,Muere en su ciudad natal,5,Muerte
+Frida Kahlo,Ciudad de México,1907,Nace en la Casa Azul de su familia,1,Nacimiento
+Frida Kahlo,Ciudad de México,1925,Sufre un grave accidente de autobús que marcará su vida y su obra,2,Accidente
+Frida Kahlo,Ciudad de México,1929,Se casa con el muralista Diego Rivera,3,Boda
+Frida Kahlo,Nueva York,1938,Expone su obra con gran éxito de crítica,4,Exposición
+Frida Kahlo,Ciudad de México,1954,Muere en la misma casa donde nació,5,Muerte
+Diego Rivera,Guanajuato,1886,Nace en una familia de clase media mexicana,1,Nacimiento
+Diego Rivera,París,1909,Vive y pinta influido por el cubismo europeo,2,Cubismo
+Diego Rivera,Ciudad de México,1933,Pinta murales sobre la historia y la revolución mexicana,3,Murales
+Diego Rivera,Ciudad de México,1957,Muere tras una vida dedicada al muralismo,4,Muerte
+Miguel Ángel Buonarroti,Caprese,1475,Nace en una pequeña localidad de la Toscana,1,Nacimiento
+Miguel Ángel Buonarroti,Florencia,1490,Se forma en el taller de Ghirlandaio y en el entorno de los Médici,2,Aprendizaje
+Miguel Ángel Buonarroti,Roma,1508,Pinta el techo de la Capilla Sixtina,3,Capilla
+Miguel Ángel Buonarroti,Roma,1564,"Muere tras una vida dedicada a la escultura, la pintura y la arquitectura",4,Muerte
+Amelia Earhart,Atchison,1897,Nace en una familia de clase media estadounidense,1,Nacimiento
+Amelia Earhart,Los Ángeles,1921,Aprende a volar y compra su primer avión,2,Vuelo
+Amelia Earhart,París,1932,Se convierte en la primera mujer en cruzar el Atlántico en solitario,3,Travesía
+Amelia Earhart,Isla Howland,1937,Desaparece durante un intento de dar la vuelta al mundo,4,Desaparición
+William Shakespeare,Stratford-upon-Avon,1564,Nace en una familia de comerciantes,1,Nacimiento
+William Shakespeare,Londres,1592,Triunfa como dramaturgo y actor en los teatros de la ciudad,2,Teatro
+William Shakespeare,Londres,1599,Estrena obras en el recién construido Teatro Globe,3,Globe
+William Shakespeare,Stratford-upon-Avon,1616,Muere en su ciudad natal tras retirarse de los escenarios,4,Muerte
+Miguel de Cervantes,Alcalá de Henares,1547,Nace en una familia de escasos recursos,1,Nacimiento
+Miguel de Cervantes,Lepanto,1571,Participa en la batalla naval y pierde el uso de una mano,2,Batalla
+Miguel de Cervantes,Argel,1575,Es capturado por piratas berberiscos y permanece cautivo varios años,3,Cautiverio
+Miguel de Cervantes,Madrid,1605,"Publica la primera parte de ""Don Quijote de la Mancha""",4,Quijote
+Miguel de Cervantes,Madrid,1616,Muere en la pobreza pese al éxito de su obra,5,Muerte
+Ernest Hemingway,Oak Park,1899,Nace en una familia acomodada de un suburbio de Chicago,1,Nacimiento
+Ernest Hemingway,Milán,1918,Es herido como voluntario de ambulancias en la Primera Guerra Mundial,2,Guerra
+Ernest Hemingway,París,1921,"Vive como parte de la ""generación perdida"" de escritores estadounidenses",3,Bohemia
+Ernest Hemingway,La Habana,1939,Se instala y escribe algunas de sus obras más conocidas,4,Instalación
+Ernest Hemingway,Ketchum,1961,Muere en su casa de Idaho,5,Muerte
+Mark Twain,Florida (Misuri),1835,Nace en un pequeño pueblo de Misuri,1,Nacimiento
+Mark Twain,Hannibal,1857,"Trabaja como piloto de barcos de vapor en el Misisipi, experiencia que marcará su obra",2,Navegación
+Mark Twain,Hartford,1876,"Publica ""Las aventuras de Tom Sawyer""",3,Publicación
+Mark Twain,Redding,1910,Muere en su casa de Connecticut,4,Muerte
+Jane Austen,Steventon,1775,Nace hija de un pastor rural inglés,1,Nacimiento
+Jane Austen,Bath,1801,Se traslada con su familia a esta ciudad balneario,2,Traslado
+Jane Austen,Chawton,1811,"Publica de forma anónima ""Sentido y sensibilidad""",3,Publicación
+Jane Austen,Winchester,1817,Muere sin haber visto reconocido públicamente su nombre como autora,4,Muerte
+Charles Dickens,Portsmouth,1812,Nace hijo de un empleado de la marina,1,Nacimiento
+Charles Dickens,Londres,1836,"Publica ""Los papeles póstumos del Club Pickwick"" y alcanza gran popularidad",2,Popularidad
+Charles Dickens,Londres,1843,"Publica ""Cuento de Navidad""",3,Publicación
+Charles Dickens,Gads Hill Place,1870,Muere en su residencia de Kent,4,Muerte
+Virginia Woolf,Londres,1882,Nace en una familia culta de la época victoriana,1,Nacimiento
+Virginia Woolf,Londres,1912,Se casa con Leonard Woolf y forma parte del círculo de Bloomsbury,2,Boda
+Virginia Woolf,Londres,1925,"Publica ""La señora Dalloway""",3,Publicación
+Virginia Woolf,Rodmell,1941,Muere ahogada en el río Ouse cerca de su casa,4,Muerte
+Gabriel García Márquez,Aracataca,1927,Nace en un pequeño pueblo de la costa caribeña colombiana,1,Nacimiento
+Gabriel García Márquez,Barranquilla,1950,Trabaja como periodista y comienza a escribir sus primeros relatos,2,Periodismo
+Gabriel García Márquez,Ciudad de México,1967,"Publica ""Cien años de soledad""",3,Publicación
+Gabriel García Márquez,Estocolmo,1982,Recibe el Premio Nobel de Literatura,4,Nobel
+Gabriel García Márquez,Ciudad de México,2014,Muere en su casa de México,5,Muerte
+Pablo Neruda,Parral,1904,Nace en el sur de Chile,1,Nacimiento
+Pablo Neruda,Santiago de Chile,1923,"Publica ""Veinte poemas de amor y una canción desesperada""",2,Publicación
+Pablo Neruda,Madrid,1935,Vive como diplomático chileno durante los años previos a la Guerra Civil española,3,Diplomacia
+Pablo Neruda,Estocolmo,1971,Recibe el Premio Nobel de Literatura,4,Nobel
+Pablo Neruda,Isla Negra,1973,Muere pocos días después del golpe de Estado en Chile,5,Muerte
+Isaac Newton,Woolsthorpe,1643,Nace de forma prematura tras la muerte de su padre,1,Nacimiento
+Isaac Newton,Cambridge,1665,Desarrolla parte de sus teorías sobre la gravedad durante una epidemia de peste,2,Gravedad
+Isaac Newton,Londres,1687,"Publica los ""Principia Mathematica""",3,Publicación
+Isaac Newton,Londres,1727,Muere tras dirigir durante años la Casa de la Moneda británica,4,Muerte
+Albert Einstein,Ulm,1879,Nace en una familia judía alemana,1,Nacimiento
+Albert Einstein,Berna,1905,"Publica varios artículos revolucionarios, entre ellos la teoría de la relatividad especial",2,Relatividad
+Albert Einstein,Berlín,1915,Presenta la teoría de la relatividad general,3,Relatividad
+Albert Einstein,Princeton,1955,Muere tras años dedicado a la física teórica en Estados Unidos,4,Muerte
+Charles Darwin,Shrewsbury,1809,Nace en una familia acomodada inglesa,1,Nacimiento
+Charles Darwin,Islas Galápagos,1835,Observa la fauna que inspirará su teoría de la evolución,2,Evolución
+Charles Darwin,Londres,1859,"Publica ""El origen de las especies""",3,Publicación
+Charles Darwin,Downe,1882,Muere en su casa de campo tras décadas de investigación,4,Muerte
+Nikola Tesla,Smiljan,1856,Nace en el seno de una familia serbia,1,Nacimiento
+Nikola Tesla,Nueva York,1884,Emigra a Estados Unidos y trabaja brevemente con Thomas Edison,2,Emigración
+Nikola Tesla,Colorado Springs,1899,Realiza experimentos con corriente eléctrica de alta frecuencia,3,Experimentos
+Nikola Tesla,Nueva York,1943,Muere solo en una habitación de hotel,4,Muerte
+Thomas Edison,Milan (Ohio),1847,Nace en un pequeño pueblo de Ohio,1,Nacimiento
+Thomas Edison,Menlo Park,1879,Desarrolla la primera bombilla incandescente comercialmente viable,2,Bombilla
+Thomas Edison,Nueva York,1882,Pone en marcha la primera central eléctrica comercial del mundo,3,Electricidad
+Thomas Edison,West Orange,1931,Muere tras registrar más de mil patentes,4,Muerte
+Galileo Galilei,Pisa,1564,Nace en una familia de músicos y comerciantes,1,Nacimiento
+Galileo Galilei,Padua,1609,Mejora el telescopio y descubre las lunas de Júpiter,2,Telescopio
+Galileo Galilei,Roma,1633,Es juzgado por la Inquisición por defender el heliocentrismo,3,Juicio
+Galileo Galilei,Florencia,1642,Muere bajo arresto domiciliario,4,Muerte
+Nicolás Copérnico,Toruń,1473,Nace en una familia de comerciantes polacos,1,Nacimiento
+Nicolás Copérnico,Bolonia,1496,"Estudia astronomía, derecho y medicina en Italia",2,Estudios
+Nicolás Copérnico,Frombork,1510,Se instala como canónigo y desarrolla sus observaciones astronómicas,3,Observaciones
+Nicolás Copérnico,Frombork,1543,Muere poco después de publicar su obra sobre el heliocentrismo,4,Muerte
+Alexander Fleming,Lochfield,1881,Nace en una granja escocesa,1,Nacimiento
+Alexander Fleming,Londres,1906,Se forma como médico y bacteriólogo,2,Formación
+Alexander Fleming,Londres,1928,Descubre por accidente la penicilina en su laboratorio,3,Penicilina
+Alexander Fleming,Londres,1955,Muere tras revolucionar la medicina con los antibióticos,4,Muerte
+Louis Pasteur,Dole,1822,Nace en una familia de curtidores franceses,1,Nacimiento
+Louis Pasteur,Lille,1856,Investiga la fermentación y desarrolla el proceso de pasteurización,2,Pasteurización
+Louis Pasteur,París,1885,Aplica con éxito la primera vacuna contra la rabia en un ser humano,3,Vacuna
+Louis Pasteur,Marnes-la-Coquette,1895,Muere cerca de París tras fundar el instituto que lleva su nombre,4,Muerte
+Stephen Hawking,Oxford,1942,Nace durante la Segunda Guerra Mundial,1,Nacimiento
+Stephen Hawking,Cambridge,1963,Es diagnosticado con una enfermedad degenerativa que le da pocos años de vida,2,Diagnóstico
+Stephen Hawking,Cambridge,1988,"Publica ""Breve historia del tiempo""",3,Publicación
+Stephen Hawking,Cambridge,2018,Muere tras décadas investigando los agujeros negros,4,Muerte
+Sigmund Freud,Příbor,1856,Nace en una pequeña ciudad de Moravia,1,Nacimiento
+Sigmund Freud,Viena,1886,Abre su consulta y comienza a desarrollar el psicoanálisis,2,Psicoanálisis
+Sigmund Freud,Viena,1900,"Publica ""La interpretación de los sueños""",3,Publicación
+Sigmund Freud,Londres,1939,Muere en el exilio tras huir del nazismo,4,Exilio
+Karl Marx,Tréveris,1818,Nace en una familia de abogados alemanes,1,Nacimiento
+Karl Marx,París,1844,Traba amistad con Friedrich Engels y desarrolla sus ideas económicas,2,Amistad
+Karl Marx,Bruselas,1848,"Publica junto a Engels ""El manifiesto comunista""",3,Manifiesto
+Karl Marx,Londres,1883,"Muere en el exilio tras dedicar años a escribir ""El Capital""",4,Muerte
+Ada Lovelace,Londres,1815,Nace hija del poeta Lord Byron,1,Nacimiento
+Ada Lovelace,Londres,1835,"Se casa con William King, conde de Lovelace",2,Boda
+Ada Lovelace,Londres,1843,Publica notas sobre la máquina analítica de Babbage consideradas el primer algoritmo informático,3,Algoritmo
+Ada Lovelace,Londres,1852,Muere joven a causa de un cáncer,4,Muerte
+Sócrates,Atenas,-470,Nace en el seno de una familia humilde ateniense,1,Nacimiento
+Sócrates,Potidea,-432,Participa como hoplita en el asedio de Potidea,2,Batalla
+Sócrates,Delio,-424,Combate en la batalla de Delio durante la Guerra del Peloponeso,3,Batalla
+Sócrates,Atenas,-399,Es condenado a muerte y muere bebiendo cicuta,4,Condena
+Platón,Atenas,-428,Nace en una familia aristocrática ateniense,1,Nacimiento
+Platón,Atenas,-387,"Funda la Academia, una de las primeras instituciones de enseñanza superior",2,Academia
+Platón,Siracusa,-367,Viaja a Sicilia para intentar formar a un gobernante filósofo,3,Viaje
+Platón,Atenas,-348,Muere en su ciudad natal,4,Muerte
+Aristóteles,Estagira,-384,Nace en una ciudad griega del norte,1,Nacimiento
+Aristóteles,Atenas,-367,Se traslada para estudiar en la Academia de Platón,2,Estudios
+Aristóteles,Pella,-343,Es tutor del joven Alejandro Magno en la corte macedonia,3,Tutoría
+Aristóteles,Atenas,-335,"Funda su propia escuela, el Liceo",4,Liceo
+Aristóteles,Calcis,-322,Muere en el exilio tras la muerte de Alejandro Magno,5,Muerte
+Marie Antoinette,Viena,1755,Nace como archiduquesa de Austria,1,Nacimiento
+Marie Antoinette,Versalles,1770,Se casa con el futuro Luis XVI de Francia,2,Boda
+Marie Antoinette,Versalles,1789,Vive el estallido de la Revolución Francesa,3,Revolución
+Marie Antoinette,París,1793,Muere guillotinada durante el Terror revolucionario,4,Guillotina
+Julio César,Roma,-100,Nace en una familia patricia romana,1,Nacimiento
+Julio César,Alesia,-52,Vence a Vercingétorix tras el asedio que sella la conquista de la Galia,2,Conquista
+Julio César,Roma,-49,Cruza el Rubicón e inicia una guerra civil,3,Rubicón
+Julio César,Roma,-44,Muere asesinado por senadores el día de los Idus de marzo,4,Asesinato
+Cleopatra,Alejandría,-69,Nace en la dinastía ptolemaica de Egipto,1,Nacimiento
+Cleopatra,Alejandría,-48,Se convierte en aliada y compañera de Julio César,2,Alianza
+Cleopatra,Actium,-31,Es derrotada junto a Marco Antonio en la batalla naval de Actium,3,Batalla
+Cleopatra,Alejandría,-30,Muere tras la conquista romana de Egipto,4,Muerte
+Alejandro Magno,Pella,-356,Nace heredero del trono de Macedonia,1,Nacimiento
+Alejandro Magno,Queronea,-338,Combate de forma decisiva junto a su padre Filipo II,2,Batalla
+Alejandro Magno,Gaugamela,-331,Derrota al imperio persa de Darío III,3,Batalla
+Alejandro Magno,Babilonia,-323,Muere joven en la ciudad que había hecho capital de su imperio,4,Muerte
+Juana de Arco,Domrémy,1412,Nace en una familia campesina de Lorena,1,Nacimiento
+Juana de Arco,Orleans,1429,Libera la ciudad del asedio inglés,2,Liberación
+Juana de Arco,Reims,1429,Acompaña la coronación de Carlos VII como rey de Francia,3,Coronación
+Juana de Arco,Ruan,1431,Muere en la hoguera acusada de herejía,4,Hoguera
+Napoleón Bonaparte,Ajaccio,1769,Nace en una familia de la pequeña nobleza corsa,1,Nacimiento
+Napoleón Bonaparte,Tolón,1793,Se distingue militarmente durante el asedio de la ciudad,2,Asedio
+Napoleón Bonaparte,París,1804,Se corona emperador de los franceses,3,Coronación
+Napoleón Bonaparte,Waterloo,1815,Sufre su derrota militar definitiva,4,Derrota
+Napoleón Bonaparte,Santa Elena,1821,Muere en el exilio en una isla del Atlántico Sur,5,Exilio
+Simón Bolívar,Caracas,1783,Nace en una familia acomodada criolla,1,Nacimiento
+Simón Bolívar,Bogotá,1819,Libera Nueva Granada tras la batalla de Boyacá,2,Independencia
+Simón Bolívar,Lima,1824,Consuma la independencia de Perú,3,Independencia
+Simón Bolívar,Santa Marta,1830,Muere enfermo tras la fragmentación de la Gran Colombia,4,Muerte
+Mahatma Gandhi,Porbandar,1869,Nace en una familia hindú de la costa oeste de la India,1,Nacimiento
+Mahatma Gandhi,Johannesburgo,1893,Desarrolla su método de resistencia no violenta durante su etapa en Sudáfrica,2,Resistencia
+Mahatma Gandhi,Dandi,1930,Encabeza la Marcha de la Sal contra el monopolio británico,3,Marcha
+Mahatma Gandhi,Nueva Delhi,1948,Muere asesinado poco después de la independencia de la India,4,Asesinato
+Nelson Mandela,Mvezo,1918,Nace en una familia de la realeza local xhosa,1,Nacimiento
+Nelson Mandela,Johannesburgo,1962,Es arrestado tras años de lucha contra el apartheid,2,Arresto
+Nelson Mandela,Robben Island,1964,Es condenado a cadena perpetua y encarcelado en la isla,3,Condena
+Nelson Mandela,Ciudad del Cabo,1990,Es liberado tras 27 años de prisión,4,Liberación
+Nelson Mandela,Johannesburgo,2013,Muere tras convertirse en el primer presidente negro de Sudáfrica,5,Muerte
+Martin Luther King,Atlanta,1929,Nace hijo de un pastor baptista,1,Nacimiento
+Martin Luther King,Montgomery,1955,Lidera el boicot a los autobuses tras el arresto de Rosa Parks,2,Boicot
+Martin Luther King,Washington D.C.,1963,"Pronuncia su discurso ""I Have a Dream""",3,Discurso
+Martin Luther King,Memphis,1968,Muere asesinado en el balcón de un motel,4,Asesinato
+Abraham Lincoln,Hodgenville,1809,Nace en una cabaña de madera,1,Nacimiento
+Abraham Lincoln,Springfield (Illinois),1860,Es elegido presidente de Estados Unidos,2,Elección
+Abraham Lincoln,Gettysburg,1863,Pronuncia su célebre discurso durante la Guerra Civil,3,Discurso
+Abraham Lincoln,Washington D.C.,1865,Muere asesinado poco después de terminar la guerra,4,Asesinato
+Winston Churchill,Blenheim,1874,Nace en el palacio familiar de los Churchill,1,Nacimiento
+Winston Churchill,Londres,1940,Se convierte en primer ministro británico al inicio de la Segunda Guerra Mundial,2,Nombramiento
+Winston Churchill,Londres,1945,Lidera al Reino Unido hasta la victoria aliada,3,Victoria
+Winston Churchill,Londres,1965,Muere tras una larga carrera política,4,Muerte
+Marco Polo,Venecia,1254,Nace en una familia de comerciantes venecianos,1,Nacimiento
+Marco Polo,Pekín,1275,Llega a la corte del emperador mongol Kublai Kan,2,Corte
+Marco Polo,Génova,1298,Es hecho prisionero y dicta el relato de sus viajes,3,Cautiverio
+Marco Polo,Venecia,1324,Muere en su ciudad natal,4,Muerte
+Fernando de Magallanes,Sabrosa,1480,Nace en una familia de la baja nobleza portuguesa,1,Nacimiento
+Fernando de Magallanes,Sevilla,1519,Zarpa al mando de una expedición para encontrar una ruta occidental a Asia,2,Zarpa
+Fernando de Magallanes,Filipinas (Mactán),1521,Muere en un enfrentamiento con habitantes locales,3,Muerte
+Fernando de Magallanes,Sanlúcar de Barrameda,1522,"Su expedición completa la primera vuelta al mundo, aunque él ya no vive para verlo",4,Circunnavegación

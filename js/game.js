@@ -19,6 +19,7 @@ export function createGameState(personaje) {
     penalizacionPistas: 0,
     pistaAñoUsada: false,
     pistaAñoRevelada: null,
+    palabrasClaveReveladas: [],
   };
 }
 
@@ -56,6 +57,7 @@ export function revelarPista(state, indiceCiudad) {
   return {
     ...state,
     pistasUsadas: { ...state.pistasUsadas, [indiceCiudad]: 2 },
+    palabrasClaveReveladas: [...state.palabrasClaveReveladas, state.personaje.hechos[indiceCiudad].palabra_clave],
     penalizacionPistas: state.penalizacionPistas + PENALIZACION_PISTA_ACTIVIDAD,
   };
 }

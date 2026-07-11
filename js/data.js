@@ -12,7 +12,7 @@ export async function fetchRandomPersonaje(excludeId) {
 
   const { data: hechos, error: errorHechos } = await supabase
     .from('hechos')
-    .select('anio, actividad, orden, ciudades(nombre, lat, lon)')
+    .select('anio, actividad, orden, palabra_clave, ciudades(nombre, lat, lon)')
     .eq('personaje_id', elegido.id)
     .order('orden', { ascending: true })
     .limit(4);
@@ -28,6 +28,7 @@ export async function fetchRandomPersonaje(excludeId) {
     hechos: hechos.map((h) => ({
       anio: h.anio,
       actividad: h.actividad,
+      palabra_clave: h.palabra_clave,
       ciudad: { nombre: h.ciudades.nombre, lat: h.ciudades.lat, lon: h.ciudades.lon },
     })),
   };

@@ -17,12 +17,13 @@ create table personajes (
 );
 
 create table hechos (
-  id           serial primary key,
-  personaje_id integer not null references personajes(id) on delete cascade,
-  ciudad_id    integer not null references ciudades(id)    on delete restrict,
-  anio         integer not null,
-  actividad    text not null,
-  orden        integer not null,
+  id            serial primary key,
+  personaje_id  integer not null references personajes(id) on delete cascade,
+  ciudad_id     integer not null references ciudades(id)    on delete restrict,
+  anio          integer not null,
+  actividad     text not null,
+  orden         integer not null,
+  palabra_clave text not null,
   unique (personaje_id, orden)
 );
 

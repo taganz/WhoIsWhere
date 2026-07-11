@@ -93,6 +93,13 @@ function renderListaFallos() {
     li.textContent = gameState.pistaAñoRevelada;
     el.listaFallos.appendChild(li);
   }
+
+  gameState.palabrasClaveReveladas.forEach((palabra) => {
+    const li = document.createElement('li');
+    li.className = 'hint';
+    li.textContent = palabra;
+    el.listaFallos.appendChild(li);
+  });
 }
 
 async function actualizarPuntosTotales() {
